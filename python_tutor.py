@@ -1515,7 +1515,14 @@ while True:
     
     def clear_screen(self):
         """Clear the terminal screen"""
-        os.system('clear' if os.name != 'nt' else 'cls')
+        import subprocess
+        try:
+            if os.name == 'nt':
+                subprocess.run(['cls'], shell=False, check=False)
+            else:
+                subprocess.run(['clear'], shell=False, check=False)
+        except Exception:
+            pass
     
     def display_menu(self):
         """Display main menu"""
@@ -1612,7 +1619,18 @@ while True:
         print("-" * 70)
         
         try:
-            exec(lesson['example'])
+            # Use restricted namespace for safer code execution
+            restricted_globals = {
+                '__builtins__': {
+                    'print': print, 'len': len, 'range': range, 
+                    'enumerate': enumerate, 'zip': zip, 'list': list, 
+                    'dict': dict, 'set': set, 'tuple': tuple, 'str': str, 
+                    'int': int, 'float': float, 'bool': bool, 'type': type, 
+                    'max': max, 'min': min, 'sum': sum, 'sorted': sorted, 
+                    'reversed': reversed, 'filter': filter, 'map': map
+                }
+            }
+            exec(lesson['example'], restricted_globals)
         except Exception as e:
             print(f"Error: {e}")
         
