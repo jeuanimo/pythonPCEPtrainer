@@ -1968,3 +1968,217 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# Additional Practice Questions and Code Examples
+ADDITIONAL_QUESTIONS = [
+    {
+        "question": "What will this code output?\nx = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)",
+        "options": ["[1, 2, 3]", "[1, 2, 3, 4]", "Error", "[4]"],
+        "correct": 1,
+        "explanation": "Lists are mutable and passed by reference. y points to the same list as x, so changes to y affect x."
+    },
+    {
+        "question": "Which of the following is an immutable type in Python?",
+        "options": ["list", "dict", "tuple", "set"],
+        "correct": 2,
+        "explanation": "Tuples are immutable. Lists, dicts, and sets can all be modified after creation."
+    },
+    {
+        "question": "What does len('hello') return?",
+        "options": ["4", "5", "6", "Error"],
+        "correct": 1,
+        "explanation": "The len() function returns the number of characters in a string. 'hello' has 5 characters."
+    },
+    {
+        "question": "What is the output of: print(10 // 3)?",
+        "options": ["3.33", "3", "4", "3.333333"],
+        "correct": 1,
+        "explanation": "The // operator performs floor division, returning the integer quotient without remainder."
+    },
+    {
+        "question": "What will this code output?\nfor i in range(3):\n    print(i)",
+        "options": ["0 1 2", "1 2 3", "0\\n1\\n2", "Error"],
+        "correct": 2,
+        "explanation": "range(3) generates 0, 1, 2. Each print() creates a new line by default."
+    },
+    {
+        "question": "Which keyword is used to create a function in Python?",
+        "options": ["function", "def", "define", "func"],
+        "correct": 1,
+        "explanation": "The 'def' keyword defines a function in Python."
+    },
+    {
+        "question": "What is the result of: 'py' * 3?",
+        "options": ["pypy", "pypy", "pypy", "Error"],
+        "correct": 1,
+        "explanation": "Multiplying a string by an integer repeats (concatenates) the string that many times."
+    },
+    {
+        "question": "What will this code output?\nx = 5\nif x > 3:\n    print('yes')\nelse:\n    print('no')",
+        "options": ["yes", "no", "Error", "yesno"],
+        "correct": 0,
+        "explanation": "5 > 3 is True, so the if block executes and prints 'yes'."
+    },
+    {
+        "question": "Which of these is a valid variable name in Python?",
+        "options": ["123abc", "_abc123", "abc-123", "abc 123"],
+        "correct": 1,
+        "explanation": "Variable names can start with a letter or underscore, followed by letters, numbers, or underscores."
+    },
+    {
+        "question": "What is type(3.14)?",
+        "options": ["int", "float", "number", "decimal"],
+        "correct": 1,
+        "explanation": "3.14 is a floating-point number, so type() returns <class 'float'>."
+    },
+    {
+        "question": "What will this output?\nprint(True + True)?",
+        "options": ["2", "True", "Error", "1"],
+        "correct": 0,
+        "explanation": "In Python, True is equivalent to 1 and False to 0 in arithmetic operations. 1 + 1 = 2."
+    },
+    {
+        "question": "What does 'in' operator do?",
+        "options": ["Creates a variable", "Checks membership", "Assigns value", "Compares equality"],
+        "correct": 1,
+        "explanation": "The 'in' operator checks if a value exists in a sequence (string, list, tuple, etc.)."
+    },
+    {
+        "question": "What is the output of: list('abc')?",
+        "options": ["'abc'", "['a', 'b', 'c']", "Error", "['abc']"],
+        "correct": 1,
+        "explanation": "list() converts an iterable into a list. For a string, it separates into individual characters."
+    },
+    {
+        "question": "Which method adds an element to a list?",
+        "options": ["add()", "append()", "insert()", "push()"],
+        "correct": 1,
+        "explanation": "The append() method adds a single element to the end of a list."
+    },
+    {
+        "question": "What does import sys do?",
+        "options": ["Imports a module", "Creates a system", "Exits the program", "Error"],
+        "correct": 0,
+        "explanation": "import loads a module. 'sys' is a module providing access to system-specific parameters."
+    }
+]
+
+CODE_PRACTICE = {
+    "practice_1": {
+        "title": "Basic String Operations",
+        "description": "Practice working with strings",
+        "code": """
+# String concatenation
+greeting = "Hello" + " " + "World"
+print(greeting)
+
+# String methods
+text = "PYTHON"
+print(text.lower())
+print(text.replace("P", "J"))
+
+# String indexing
+word = "PCEP"
+print(word[0])  # First character
+print(word[-1])  # Last character
+print(word[1:3])  # Substring
+"""
+    },
+    "practice_2": {
+        "title": "Working with Lists",
+        "description": "Practice list operations",
+        "code": """
+# List operations
+numbers = [1, 2, 3, 4, 5]
+numbers.append(6)
+numbers.extend([7, 8])
+print(numbers)
+
+# List indexing and slicing
+print(numbers[0])
+print(numbers[-2])
+print(numbers[1:4])
+
+# List methods
+numbers.remove(3)
+numbers.reverse()
+print(numbers)
+"""
+    },
+    "practice_3": {
+        "title": "Loops and Conditionals",
+        "description": "Practice control flow",
+        "code": """
+# For loop
+for i in range(1, 6):
+    print(f"Number: {i}")
+
+# While loop
+x = 5
+while x > 0:
+    print(x)
+    x -= 1
+
+# Nested conditionals
+age = 25
+if age >= 18:
+    print("Adult")
+    if age >= 65:
+        print("Senior")
+else:
+    print("Minor")
+"""
+    },
+    "practice_4": {
+        "title": "Functions",
+        "description": "Practice defining and calling functions",
+        "code": """
+# Simple function
+def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))
+
+# Function with multiple parameters
+def add(a, b):
+    return a + b
+
+print(add(5, 3))
+
+# Function with default parameter
+def power(base, exp=2):
+    return base ** exp
+
+print(power(3))
+print(power(3, 3))
+"""
+    },
+    "practice_5": {
+        "title": "Dictionaries",
+        "description": "Practice working with dictionaries",
+        "code": """
+# Create a dictionary
+person = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+
+print(person["name"])
+
+# Add/modify items
+person["job"] = "Engineer"
+person["age"] = 31
+
+# Dictionary methods
+print(person.keys())
+print(person.values())
+print(person.items())
+
+# Check if key exists
+if "name" in person:
+    print("Name exists")
+"""
+    }
+}
