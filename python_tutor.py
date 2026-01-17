@@ -2182,3 +2182,405 @@ if "name" in person:
 """
     }
 }
+
+# Extended Practice Questions Set 2
+EXTENDED_QUESTIONS = [
+    {
+        "question": "What is the output of: print(5 == 5.0)?",
+        "options": ["True", "False", "Error", "None"],
+        "correct": 0,
+        "explanation": "In Python, 5 and 5.0 are equal in value. The == operator checks value equality."
+    },
+    {
+        "question": "Which of the following creates an empty list?",
+        "options": ["[]", "list()", "[None]", "Both A and B"],
+        "correct": 3,
+        "explanation": "Both [] and list() create empty lists. They are equivalent."
+    },
+    {
+        "question": "What does enumerate() do?",
+        "options": ["Counts items", "Adds index to items", "Removes duplicates", "Sorts items"],
+        "correct": 1,
+        "explanation": "enumerate() returns pairs of (index, item) for each element in an iterable."
+    },
+    {
+        "question": "What is the output of: 'test'.upper()?",
+        "options": ["'test'", "'TEST'", "Error", "'Test'"],
+        "correct": 1,
+        "explanation": "The upper() method converts all characters in a string to uppercase."
+    },
+    {
+        "question": "What does break do in a loop?",
+        "options": ["Pauses the loop", "Exits the loop", "Restarts the loop", "Skips iteration"],
+        "correct": 1,
+        "explanation": "break exits the loop immediately, regardless of the loop condition."
+    },
+    {
+        "question": "What is the output of: print([1,2,3] + [4,5])?",
+        "options": ["[1,2,3,4,5]", "Error", "[1,2,3] [4,5]", "[1,2,3+4,5]"],
+        "correct": 0,
+        "explanation": "The + operator concatenates lists, combining them into a single list."
+    },
+    {
+        "question": "What does continue do in a loop?",
+        "options": ["Exits the loop", "Skips to next iteration", "Pauses execution", "Error"],
+        "correct": 1,
+        "explanation": "continue skips the current iteration and moves to the next one."
+    },
+    {
+        "question": "Which is a valid Python comment?",
+        "options": ["// comment", "# comment", "/* comment */", "-- comment"],
+        "correct": 1,
+        "explanation": "Python uses # for single-line comments."
+    },
+    {
+        "question": "What is the output of: print(2 ** 3 ** 2)?",
+        "options": ["512", "64", "128", "256"],
+        "correct": 0,
+        "explanation": "Exponentiation is right-associative: 2 ** (3 ** 2) = 2 ** 9 = 512."
+    },
+    {
+        "question": "What does sorted() return?",
+        "options": ["None", "A sorted list", "Modifies original", "Error"],
+        "correct": 1,
+        "explanation": "sorted() returns a new sorted list without modifying the original."
+    },
+    {
+        "question": "What is the output of: print({1, 2, 2, 3})?",
+        "options": ["{1, 2, 2, 3}", "{1, 2, 3}", "Error", "[1, 2, 3]"],
+        "correct": 1,
+        "explanation": "Sets automatically remove duplicates. {1, 2, 2, 3} becomes {1, 2, 3}."
+    },
+    {
+        "question": "What does max([3,1,4,1,5]) return?",
+        "options": ["1", "3", "5", "Error"],
+        "correct": 2,
+        "explanation": "max() returns the largest item in an iterable."
+    },
+    {
+        "question": "What does min([3,1,4,1,5]) return?",
+        "options": ["1", "3", "4", "5"],
+        "correct": 0,
+        "explanation": "min() returns the smallest item in an iterable."
+    },
+    {
+        "question": "What does sum([1,2,3,4]) return?",
+        "options": ["10", "9", "11", "Error"],
+        "correct": 0,
+        "explanation": "sum() returns the total of all items. 1+2+3+4 = 10."
+    },
+    {
+        "question": "What is the output of: print('a' in 'apple')?",
+        "options": ["True", "False", "Error", "None"],
+        "correct": 0,
+        "explanation": "The 'in' operator checks if 'a' is in the string 'apple'. It is."
+    },
+    {
+        "question": "What does split() do?",
+        "options": ["Joins strings", "Splits string into list", "Removes characters", "Error"],
+        "correct": 1,
+        "explanation": "split() breaks a string into a list based on a delimiter (default is space)."
+    },
+    {
+        "question": "What does join() do?",
+        "options": ["Splits strings", "Combines list into string", "Removes spaces", "Error"],
+        "correct": 1,
+        "explanation": "join() combines a list of strings into a single string with a separator."
+    },
+    {
+        "question": "What is the output of: print(abs(-5))?",
+        "options": ["-5", "5", "Error", "0"],
+        "correct": 1,
+        "explanation": "abs() returns the absolute value (distance from zero)."
+    },
+    {
+        "question": "What does round(3.7) return?",
+        "options": ["3", "3.7", "4", "3.0"],
+        "correct": 2,
+        "explanation": "round() rounds to the nearest integer. 3.7 rounds up to 4."
+    },
+    {
+        "question": "What is the output of: print(isinstance(5, int))?",
+        "options": ["True", "False", "Error", "5"],
+        "correct": 0,
+        "explanation": "isinstance() checks if an object is an instance of a class. 5 is an int."
+    }
+]
+
+# Extended Code Practice Examples
+EXTENDED_PRACTICE = {
+    "practice_6": {
+        "title": "Exception Handling",
+        "description": "Practice try-except blocks",
+        "code": """
+# Basic try-except
+try:
+    result = 10 / 2
+    print(result)
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+
+# Try with multiple exceptions
+try:
+    number = int("abc")
+except ValueError:
+    print("Invalid number format")
+except Exception as e:
+    print(f"Error: {e}")
+
+# Try-except-else
+try:
+    x = 5
+except ValueError:
+    print("Error occurred")
+else:
+    print("No error, x =", x)
+"""
+    },
+    "practice_7": {
+        "title": "List Comprehensions",
+        "description": "Practice list comprehensions",
+        "code": """
+# Basic list comprehension
+squares = [x**2 for x in range(1, 6)]
+print(squares)  # [1, 4, 9, 16, 25]
+
+# With condition
+evens = [x for x in range(10) if x % 2 == 0]
+print(evens)  # [0, 2, 4, 6, 8]
+
+# Nested list comprehension
+matrix = [[i*j for j in range(1, 4)] for i in range(1, 4)]
+print(matrix)
+
+# List comprehension with string
+chars = [c.upper() for c in "hello"]
+print(chars)  # ['H', 'E', 'L', 'L', 'O']
+"""
+    },
+    "practice_8": {
+        "title": "Lambda Functions",
+        "description": "Practice lambda expressions",
+        "code": """
+# Simple lambda
+square = lambda x: x ** 2
+print(square(5))
+
+# Lambda with multiple parameters
+add = lambda x, y: x + y
+print(add(3, 4))
+
+# Lambda with map()
+numbers = [1, 2, 3, 4, 5]
+doubled = list(map(lambda x: x * 2, numbers))
+print(doubled)
+
+# Lambda with filter()
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(evens)
+
+# Lambda with sorted()
+pairs = [(1, 'b'), (2, 'a'), (3, 'c')]
+sorted_pairs = sorted(pairs, key=lambda x: x[1])
+print(sorted_pairs)
+"""
+    },
+    "practice_9": {
+        "title": "Working with Tuples",
+        "description": "Practice tuple operations",
+        "code": """
+# Creating tuples
+single = (1,)  # Note the comma for single element
+pair = (1, 2)
+triple = (1, 2, 3)
+
+# Tuple unpacking
+x, y, z = (1, 2, 3)
+print(x, y, z)
+
+# Tuples are immutable
+t = (1, 2, 3)
+# t[0] = 5  # This would cause an error
+
+# Tuple operations
+print(len(t))
+print(t[0])
+print(t[-1])
+print(1 in t)
+
+# Converting between lists and tuples
+lst = [1, 2, 3]
+tup = tuple(lst)
+lst2 = list(tup)
+"""
+    },
+    "practice_10": {
+        "title": "Set Operations",
+        "description": "Practice working with sets",
+        "code": """
+# Creating sets
+s1 = {1, 2, 3, 4}
+s2 = {3, 4, 5, 6}
+
+# Set operations
+union = s1 | s2
+intersection = s1 & s2
+difference = s1 - s2
+symmetric_diff = s1 ^ s2
+
+print(f"Union: {union}")
+print(f"Intersection: {intersection}")
+print(f"Difference: {difference}")
+
+# Set methods
+s1.add(5)
+s1.remove(1)
+s1.discard(10)  # Won't error if not present
+
+# Checking membership
+if 2 in s1:
+    print("2 is in the set")
+"""
+    },
+    "practice_11": {
+        "title": "String Formatting",
+        "description": "Practice different string formatting methods",
+        "code": """
+# Old-style formatting
+name = "Alice"
+age = 30
+formatted1 = "%s is %d years old" % (name, age)
+print(formatted1)
+
+# str.format() method
+formatted2 = "{} is {} years old".format(name, age)
+print(formatted2)
+
+# f-strings (Python 3.6+)
+formatted3 = f"{name} is {age} years old"
+print(formatted3)
+
+# f-strings with expressions
+x = 10
+y = 20
+print(f"Sum: {x + y}")
+print(f"Max: {max(x, y)}")
+
+# Formatting numbers
+pi = 3.14159
+print(f"Pi: {pi:.2f}")  # 2 decimal places
+"""
+    },
+    "practice_12": {
+        "title": "Importing and Modules",
+        "description": "Practice importing and using modules",
+        "code": """
+# Import entire module
+import math
+print(math.pi)
+print(math.sqrt(16))
+
+# Import specific functions
+from math import sqrt, pow
+print(sqrt(25))
+print(pow(2, 3))
+
+# Import with alias
+import math as m
+print(m.ceil(3.2))
+
+# Import all (use with caution)
+# from math import *
+
+# Using collections module
+from collections import Counter
+words = "hello world"
+counter = Counter(words)
+print(counter)  # Shows character frequencies
+"""
+    },
+    "practice_13": {
+        "title": "Working with Files",
+        "description": "Practice file operations",
+        "code": """
+# Writing to a file
+with open("output.txt", "w") as f:
+    f.write("Hello, World!\\n")
+    f.write("Second line\\n")
+
+# Reading from a file
+with open("output.txt", "r") as f:
+    content = f.read()
+    print(content)
+
+# Reading line by line
+with open("output.txt", "r") as f:
+    for line in f:
+        print(line.strip())
+
+# Appending to a file
+with open("output.txt", "a") as f:
+    f.write("Appended line\\n")
+"""
+    },
+    "practice_14": {
+        "title": "Class Definition Basics",
+        "description": "Practice defining and using classes",
+        "code": """
+# Define a class
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def bark(self):
+        return f"{self.name} says Woof!"
+    
+    def birthday(self):
+        self.age += 1
+
+# Create instances
+dog1 = Dog("Rex", 3)
+dog2 = Dog("Buddy", 5)
+
+# Use methods and attributes
+print(dog1.name)
+print(dog1.bark())
+dog1.birthday()
+print(dog1.age)
+"""
+    },
+    "practice_15": {
+        "title": "Advanced Loops",
+        "description": "Practice while loops and loop control",
+        "code": """
+# While loop with counter
+count = 0
+while count < 5:
+    print(f"Count: {count}")
+    count += 1
+
+# While loop with break
+num = 0
+while True:
+    if num == 5:
+        break
+    print(num)
+    num += 1
+
+# While loop with continue
+x = 0
+while x < 10:
+    x += 1
+    if x % 2 == 0:
+        continue
+    print(x)  # Only prints odd numbers
+
+# Nested loops
+for i in range(3):
+    for j in range(3):
+        print(f"({i}, {j})", end=" ")
+    print()
+"""
+    }
+]
