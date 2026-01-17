@@ -1471,6 +1471,189 @@ while True:
                         "explanation": "Division by zero raises ZeroDivisionError"
                     }
                 ]
+            },
+            {
+                "title": "PCEP Bonus Questions - Study Guide Edition",
+                "section": "PCEP Bonus",
+                "content": """
+PCEP EXAM PREPARATION: Comprehensive Bonus Questions
+
+This bonus lesson contains 20 additional exam-style questions from the official
+Certify4Sure PCEP-30-02 study guide. These questions represent real exam scenarios.
+
+TOPICS COVERED:
+- Python syntax and semantics
+- Data types and operations
+- Operators and precedence
+- Control flow structures
+- Data structures (lists, dictionaries, tuples, sets)
+- Functions and scope
+- Exception handling
+- String operations and manipulation
+- Input/output operations
+- Modules and imports
+- Number systems (binary, octal, hex)
+- Object-oriented programming
+
+EXAM STRATEGY FOR SUCCESS:
+1. Read carefully - Pay attention to every word in the question
+2. Identify topic - Determine what concept is being tested
+3. Eliminate answers - Rule out obviously wrong options
+4. Review explanations - Learn from each question answered
+5. Track weak areas - Note topics where you're struggling
+6. Practice consistently - Repetition builds mastery
+
+This bonus section provides valuable practice for last-minute exam prep!
+                """,
+                "example": """
+# Example 1: Operator precedence
+result = 2 + 3 * 4  # Multiplication first: 2 + 12 = 14
+print(result)
+
+# Example 2: Type conversion
+value = int("42")
+text = str(3.14)
+print(type(value), type(text))
+
+# Example 3: List operations
+numbers = [1, 2, 3, 4, 5]
+print(numbers[1:4])   # [2, 3, 4]
+print(numbers[-1])    # 5
+print(len(numbers))   # 5
+
+# Example 4: String methods
+message = "Python Programming"
+print(message.lower())      # python programming
+print(message.split())      # ['Python', 'Programming']
+print("o" in message)       # True
+                """,
+                "exercise": {
+                    "description": "Create a function that takes two numbers and returns their sum, then call it with 5 and 7",
+                    "hint": "def add(a, b): return a + b; print(add(5, 7))",
+                    "check": lambda code: "def" in code and "return" in code
+                },
+                "quiz": [
+                    {
+                        "question": "Python is an example of which programming language category?",
+                        "options": ["A) Interpreted", "B) Assembly", "C) Compiled", "D) Machine"],
+                        "answer": "A",
+                        "explanation": "Python is an interpreted language - code is executed by an interpreter at runtime."
+                    },
+                    {
+                        "question": "A set of rules which defines the ways in which words can be coupled in sentences is called:",
+                        "options": ["A) Lexis", "B) Syntax", "C) Semantics", "D) Dictionary"],
+                        "answer": "B",
+                        "explanation": "Syntax defines the rules for proper code structure and grammar."
+                    },
+                    {
+                        "question": "What is the expected output of: len([1, 2, 3])?",
+                        "options": ["A) 1", "B) 2", "C) 3", "D) Error"],
+                        "answer": "C",
+                        "explanation": "len() returns the number of elements in a list. [1, 2, 3] has 3 elements."
+                    },
+                    {
+                        "question": "What does the modulo operator (%) return?",
+                        "options": ["A) Quotient", "B) Remainder", "C) Product", "D) Power"],
+                        "answer": "B",
+                        "explanation": "The % operator returns the remainder after division. 10 % 3 = 1"
+                    },
+                    {
+                        "question": "Which of these is a mutable data type?",
+                        "options": ["A) Tuple", "B) String", "C) List", "D) Integer"],
+                        "answer": "C",
+                        "explanation": "Lists are mutable - their contents can be changed. Tuples and strings are immutable."
+                    },
+                    {
+                        "question": "What is the range of a while loop with condition 'while x < 5'?",
+                        "options": ["A) x from 0 to 4", "B) x from 0 to 5", "C) Depends on x init", "D) Infinite"],
+                        "answer": "C",
+                        "explanation": "The range depends on the initial value of x and how it's modified in the loop."
+                    },
+                    {
+                        "question": "How do you create an empty dictionary?",
+                        "options": ["A) {}", "B) []", "C) ()", "D) None"],
+                        "answer": "A",
+                        "explanation": "Dictionaries use curly braces {}. An empty dictionary is {}."
+                    },
+                    {
+                        "question": "What does the 'in' operator check?",
+                        "options": ["A) Assignment", "B) Membership", "C) Comparison", "D) Type"],
+                        "answer": "B",
+                        "explanation": "'in' checks if a value exists in a sequence like lists, strings, or tuples."
+                    },
+                    {
+                        "question": "Which exception is raised for division by zero?",
+                        "options": ["A) ValueError", "B) TypeError", "C) ZeroDivisionError", "D) RuntimeError"],
+                        "answer": "C",
+                        "explanation": "Division by zero raises ZeroDivisionError: 10 / 0"
+                    },
+                    {
+                        "question": "What is the output of: print(type(42))?",
+                        "options": ["A) <class 'int'>", "B) int", "C) <int>", "D) 42"],
+                        "answer": "A",
+                        "explanation": "type() returns the class of an object as <class 'typename'>."
+                    },
+                    {
+                        "question": "How do you access the last element of a list?",
+                        "options": ["A) list[0]", "B) list[-1]", "C) list[end]", "D) list.last()"],
+                        "answer": "B",
+                        "explanation": "Negative indexing: list[-1] gives the last element, list[-2] the second-to-last, etc."
+                    },
+                    {
+                        "question": "What does 'pass' do in Python?",
+                        "options": ["A) Ends a loop", "B) Does nothing (null operation)", "C) Returns from function", "D) Continues loop"],
+                        "answer": "B",
+                        "explanation": "'pass' is a null operation - when executed, nothing happens. Used as placeholder."
+                    },
+                    {
+                        "question": "Which keyword is used to create a function?",
+                        "options": ["A) function", "B) func", "C) def", "D) define"],
+                        "answer": "C",
+                        "explanation": "The 'def' keyword defines a function in Python."
+                    },
+                    {
+                        "question": "What is a lambda function?",
+                        "options": ["A) Named function", "B) Anonymous function", "C) Built-in function", "D) Class method"],
+                        "answer": "B",
+                        "explanation": "Lambda creates small anonymous functions: lambda x: x * 2"
+                    },
+                    {
+                        "question": "How do you convert string '42' to integer?",
+                        "options": ["A) str(42)", "B) int('42')", "C) convert('42')", "D) '42'.int()"],
+                        "answer": "B",
+                        "explanation": "int() converts a string to an integer. int('42') returns 42"
+                    },
+                    {
+                        "question": "What does the split() method do?",
+                        "options": ["A) Joins strings", "B) Replaces characters", "C) Splits into list", "D) Checks length"],
+                        "answer": "C",
+                        "explanation": "'hello world'.split() returns ['hello', 'world'] - splits by whitespace."
+                    },
+                    {
+                        "question": "Which loop is best for iterating over a list?",
+                        "options": ["A) while loop", "B) for loop", "C) do-while loop", "D) goto loop"],
+                        "answer": "B",
+                        "explanation": "for loops are preferred for iterating over sequences like lists and strings."
+                    },
+                    {
+                        "question": "What does 'elif' stand for?",
+                        "options": ["A) else if", "B) electric if", "C) elif is standalone", "D) else loop"],
+                        "answer": "A",
+                        "explanation": "'elif' is short for 'else if' and provides additional conditions to check."
+                    },
+                    {
+                        "question": "How do you add an element to a list?",
+                        "options": ["A) list.add(item)", "B) list.append(item)", "C) list.push(item)", "D) list += item"],
+                        "answer": "B",
+                        "explanation": ".append() adds a single element to the end of a list."
+                    },
+                    {
+                        "question": "What is the correct way to write a docstring?",
+                        "options": ["A) # comment", "B) // comment", "C) \"\"\"docstring\"\"\"", "D) -- comment"],
+                        "answer": "C",
+                        "explanation": "Docstrings use triple quotes: \"\"\"This is a docstring\"\"\""
+                    }
+                ]
             }
         ]
         
@@ -1478,8 +1661,10 @@ while True:
         self.practice_questions = self._generate_practice_bank()
     
     def _generate_practice_bank(self):
-        """Generate pool of all quiz questions for practice exams"""
+        """Generate pool of all quiz questions plus PDF study guide questions for practice exams"""
         questions = []
+        
+        # Add all lesson quiz questions
         for lesson in self.lessons:
             if "quiz" in lesson:
                 for q in lesson["quiz"]:
@@ -1487,7 +1672,52 @@ while True:
                         **q,
                         "topic": lesson["title"]
                     })
+        
+        # Add all 183 questions from PCEP study guide PDF
+        pdf_study_questions = self._load_pdf_study_questions()
+        questions.extend(pdf_study_questions)
+        
         return questions
+    
+    def _load_pdf_study_questions(self):
+        """Load 183 PCEP exam questions from study guide"""
+        pdf_json_path = os.path.join(os.path.dirname(__file__), "PCEP_Questions.json")
+        
+        if not os.path.exists(pdf_json_path):
+            return []
+        
+        try:
+            with open(pdf_json_path, 'r') as f:
+                pdf_questions = json.load(f)
+            
+            formatted_questions = []
+            for q in pdf_questions:
+                options = []
+                if isinstance(q.get('options'), dict):
+                    for key in sorted(q['options'].keys()):
+                        options.append(q['options'][key])
+                
+                # Get correct answer index
+                answer_key = q.get('correct_answer', 'A')
+                answer_key = answer_key[0] if answer_key else 'A'
+                correct_idx = ord(answer_key) - ord('A') if answer_key in 'ABCD' else 0
+                
+                # Ensure we have 4 options
+                while len(options) < 4:
+                    options.append("")
+                
+                formatted_questions.append({
+                    "question": q.get('question_text', '')[:150],
+                    "options": options[:4],
+                    "correct": correct_idx,
+                    "answer": answer_key,
+                    "explanation": q.get('explanation', 'See study guide for details.')[:300],
+                    "topic": "PDF Study Guide"
+                })
+            
+            return formatted_questions
+        except Exception:
+            return []
     
     def load_progress(self):
         """Load user's progress from file"""

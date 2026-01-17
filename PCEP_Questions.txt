@@ -1,0 +1,3150 @@
+==========================================================================================
+PCEP-30-02 EXAM QUESTIONS EXTRACTED
+Total Questions Found: 183
+==========================================================================================
+
+QUESTION 1
+------------------------------------------------------------------------------------------
+Question Text:
+DRAG DROP
+Insert the code boxes in the correct positions in order to build a line of code which asks the user for an integer
+value and assigns it to the depth variable.
+(Note: some code boxes will not be used.)
+
+Answer Options:
+  A. depth = int(input("Enter the immersion depth: "))
+
+Correct Answer: A
+
+Explanation:  One possible way to insert the code boxes in the correct positions in order to build a line of code which asks the user for an integer value and assigns it to the depth variable is: depth = int(input("Enter the immersion depth: ")) This line of code uses the input function to prompt the user for a 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 2
+------------------------------------------------------------------------------------------
+Question Text:
+A set of rules which defines the ways in which words can be coupled in sentences is called:
+
+Answer Options:
+  A. lexis
+  B. syntax
+  C. semantics
+  D. dictionary
+
+Correct Answer: B
+
+Explanation:  Syntax is the branch of linguistics that studies the structure and rules of sentences in natural languages. Lexis is the vocabulary of a language. Semantics is the study of meaning in language. A dictionary is a collection of words and their definitions, synonyms, pronunciations, etc. [Python Insti
+
+------------------------------------------------------------------------------------------
+
+QUESTION 3
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following expressions evaluate to a non-zero result? (Select two answers.)
+
+Answer Options:
+  A. 2 ** 3 / A - 2
+  B. 4 / 2 * * 3 - 2
+  C. 1 * * 3 / 4 - 1
+  D. 1 * 4 // 2 ** 3
+
+Correct Answer: AB
+
+Explanation:  In Python, the ** operator is used for exponentiation, the / operator is used for floating-point division, and the // operator is used for integer division. The order of operations is parentheses, exponentiation, multiplication/ division, and addition/subtraction. Therefore, the expressions can be 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 4
+------------------------------------------------------------------------------------------
+Question Text:
+Python Is an example of which programming language category?
+
+Answer Options:
+  A. interpreted
+  B. assembly
+  C. compiled
+  D. machine
+
+Correct Answer: A
+
+Explanation:  Python is an interpreted programming language, which means that the source code is translated into executable code by an interpreter at runtime, rather than by a compiler beforehand. Interpreted languages are more flexible and portable than compiled languages, but they are also slower and less effi
+
+------------------------------------------------------------------------------------------
+
+QUESTION 5
+------------------------------------------------------------------------------------------
+Question Text:
+How many hashes (+) does the code output to the screen?
+
+floor = 10
+while floor != 0:
+floor //= 4
+print ("#", end=””)
+else:
+print ("#")
+
+Answer Options:
+  A. one
+  B. zero (the code outputs nothing)
+  C. five
+  D. three
+
+Correct Answer: C
+
+Explanation:  The code snippet that you have sent is a loop that checks if a variable oefloor is less than or equal to 0 and prints a string accordingly. The code is as follows: floor = 5 while floor > 0: print(oe+ ) floor = floor - 1 The code starts with assigning the value 5 to the variable oefloor . Then, it 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 6
+------------------------------------------------------------------------------------------
+Question Text:
+What happens when the user runs the following code?
+
+Answer Options:
+  A. The code outputs 3.
+  B. The code outputs 2.
+  C. The code enters an infinite loop.
+  D. The code outputs 1.
+
+Correct Answer: B
+
+Explanation:  The code snippet that you have sent is calculating the value of a variable oetotal based on the values in the range of 0 to 3. The code is as follows: total = 0 for i in range(0, 3): if i % 2 == 0: total = total + 1 else: total = total + 2 print(total) The code starts with assigning the value 0 to 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 7
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. The code produces no output.
+  B. * * *
+  C. * *
+  D. *
+
+Correct Answer: C
+
+Explanation:  The code snippet that you have sent is a conditional statement that checks if a variable oecounter is less than 0, greater than or equal to 42, or neither. The code is as follows: if counter < 0: print(oeoe) elif counter >= 42: print( oe) else: print( ) The code starts with checking if the value of
+
+------------------------------------------------------------------------------------------
+
+QUESTION 8
+------------------------------------------------------------------------------------------
+Question Text:
+What happens when the user runs the following code?
+
+Answer Options:
+  A. The program outputs three asterisks ( *** )to the screen.
+  B. The program outputs one asterisk ( * ) to the screen.
+  C. The program outputs five asterisks ( ***** ) to the screen.
+  D. The program enters an infinite loop.
+
+Correct Answer: D
+
+Explanation:  The code snippet that you have sent is a while loop with an if statement and a print statement inside it. The code is as follows: while True: if counter < 0: print(*) else: print( ** ) The code starts with entering a while loop that repeats indefinitely, because the condition oeTrue is always true.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 9
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+equals = 0
+for i in range (2):
+for j in range (2):
+if i == j:
+equals += 1
+else:
+equals +=1
+print (equals)
+
+Answer Options:
+  A. The code outputs nothing.
+  B. 3
+  C. 1
+  D. 4
+
+Correct Answer: C
+
+Explanation:  The code snippet that you have sent is checking if two numbers are equal and printing the result. The code is as follows: num1 = 1 num2 = 2 if num1 == num2: print(4) else: print(1) The code starts with assigning the values 1 and 2 to the variables oenum1 and oenum2 respectively. Then, it enters an 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 10
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+collection = [ ]
+collection.append(1)
+collection.insert(0, 2)
+duplicate = collection
+duplicate.append(3)
+print(len(collection) + len(duplicate))
+
+A. 5
+
+Answer Options:
+  B. 4
+  C. 6
+  D. The code raises an exception and outputs nothing.
+
+Correct Answer: D
+
+Explanation:  The code snippet that you have sent is trying to print the combined length of two lists, oecollection and oeduplicate . The code is as follows: collection = [] collection.append(1) collection.insert(0, 2) duplicate = collection duplicate.append(3) print(len (collection) + len(duplicate)) The code s
+
+------------------------------------------------------------------------------------------
+
+QUESTION 11
+------------------------------------------------------------------------------------------
+Question Text:
+Assuming that the following assignment has been successfully executed:
+
+My_list " [1, 1, 2, 3]
+Select the expressions which will not raise any exception.
+(Select two expressions.)
+
+Answer Options:
+  A. my_list[-10]
+  B. my_list|my_Li1st | 3| I
+  C. my list [6]
+  D. my_List- [0:1]
+
+Correct Answer: BD
+
+Explanation:  The code snippet that you have sent is assigning a list of four numbers to a variable called oemy_list . The code is as follows: my_list = [1, 1, 2, 3] The code creates a list object that contains the elements 1, 1, 2, and 3, and assigns it to the variable oemy_list . The list can be accessed by us
+
+------------------------------------------------------------------------------------------
+
+QUESTION 12
+------------------------------------------------------------------------------------------
+Question Text:
+What is true about tuples? (Select two answers.)
+
+Answer Options:
+  A. Tuples are immutable, which means that their contents cannot be changed during their lifetime.
+  B. The len { } function cannot be applied to tuples.
+  C. An empty tuple is written as { } .
+  D. Tuples can be indexed and sliced like lists.
+
+Correct Answer: AD
+
+Explanation:  Tuples are one of the built-in data types in Python that are used to store collections of data. Tuples have some characteristics that distinguish them from other data types, such as lists, sets, and dictionaries. Some of these characteristics are: Tuples are immutable, which means that their conten
+
+------------------------------------------------------------------------------------------
+
+QUESTION 13
+------------------------------------------------------------------------------------------
+Question Text:
+Assuming that the following assignment has been successfully executed:
+
+The code is as follows:
+
+the_list = ["1", 1, 1, 1]
+Which of the following expressions evaluate to True? (Select two expressions.)
+
+Answer Options:
+  A. the_List.index {"1"} in the_list
+  B. 1.1 in the_list |1:3 |
+  C. len (the list [0:2]} <3
+  D. the_list. index {'1'} -- 0
+
+Correct Answer: CD
+
+Explanation:  The code snippet that you have sent is assigning a list of four values to a variable called oethe_list . The code is as follows: the_list = ["1", 1, 1, 1] The code creates a list object that contains the values "1", 1, 1, and 1, and assigns it to the variable oethe_list . The list can be accessed b
+
+------------------------------------------------------------------------------------------
+
+QUESTION 14
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+menu = ("pizza": 2.39, "pasta": 1.99, "folpetti": 3.99)
+
+for value in menu:
+print(str(value) [0], end="")
+
+Answer Options:
+  A. The code is erroneous and cannot be run.
+  B. ppf
+  C. 213
+  D. pizzapastafolpetti
+
+Correct Answer: B
+
+Explanation:  The code snippet that you have sent is using the slicing operation to get parts of a string and concatenate them together. The code is as follows: pizza = oepizza pasta = oepasta folpetti = (folpetti print(pizza[0] + pasta[0] + folpetti[0]) The code starts with assigning the strings oepizza , oepas
+
+------------------------------------------------------------------------------------------
+
+QUESTION 15
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected result of the following code?
+
+rates = (1.2, 1.4, 1.0)
+new = rates [3:]
+for rate in rates [-1:):
+new += (rate, )
+print (len (new))
+
+Answer Options:
+  A. 5
+  B. 2
+  C. 1
+  D. The code will cause an unhandled
+
+Correct Answer: D
+
+Explanation:  The code snippet that you have sent is trying to use a list comprehension to create a new list from an existing list. The code is as follows: my_list = [1, 2, 3, 4, 5] new_list = [x for x in my_list if x > 5] The code starts with creating a list called oemy_list that contains the numbers 1, 2, 3, 4
+
+------------------------------------------------------------------------------------------
+
+QUESTION 16
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected result of running the following code?
+
+Answer Options:
+  A. The code prints 1 .
+  C. The code raises an unhandled exception.
+  D. The code prints 0
+
+Correct Answer: C
+
+Explanation:  The code snippet that you have sent is trying to use the index method to find the position of a value in a list. The code is as follows: the_list = [1, 2, 3, 4, 5] print(the_list.index(6)) The code starts with creating a list called oethe_list that contains the numbers 1, 2, 3, 4, and 5. Then, it t
+
+------------------------------------------------------------------------------------------
+
+QUESTION 17
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 1
+  B. The code raises an unhandled exception.
+  C. False
+  D. ('Fermi ', '2021', 'False')
+
+Correct Answer: D
+
+Explanation:  The code snippet that you have sent is defining and calling a function in Python. The code is as follows: def runner(brand, model, year): return (brand, model, year) print(runner(oeFermi )) The code starts with defining a function called oerunner with three parameters: oebrand , oemodel , and oeyea
+
+------------------------------------------------------------------------------------------
+
+QUESTION 18
+------------------------------------------------------------------------------------------
+Question Text:
+What is true about exceptions and debugging? (Select two answers.)
+
+Answer Options:
+  A. A tool that allows you to precisely trace program execution is called a debugger.
+  B. If some Python code is executed without errors, this proves that there are no errors in it.
+  C. One try-except block may contain more than one except branch.
+  D. The default (anonymous) except branch cannot be the last branch in the try-except block.
+
+Correct Answer: AC
+
+Explanation:  Exceptions and debugging are two important concepts in Python programming that are related to handling and preventing errors. Exceptions are errors that occur when the code cannot be executed properly, such as syntax errors, type errors, index errors, etc. Debugging is the process of finding and fi
+
+------------------------------------------------------------------------------------------
+
+QUESTION 19
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following are the names of Python passing argument styles? (Select two answers.)
+
+Answer Options:
+  A. keyword
+  B. reference
+  C. indicatory
+  D. positional
+
+Correct Answer: AD
+
+Explanation:  Keyword arguments are arguments that are specified by using the name of the parameter, followed by an equal sign and the value of the argument. For example, print (sep='-', end='!') is a function call with keyword arguments. Keyword arguments can be used to pass arguments in any order, and to provi
+
+------------------------------------------------------------------------------------------
+
+QUESTION 20
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected result of the following code?
+
+Answer Options:
+  A. The code is erroneous and cannot be run.
+  B. 20
+  C. 10
+
+Correct Answer: A
+
+Explanation:  The code snippet that you have sent is trying to use the global keyword to access and modify a global variable inside a function. The code is as follows: speed = 10 def velocity(): global speed speed = speed + 10 return speed print(velocity()) The code starts with creating a global variable called 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 21
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+A. 2
+
+Answer Options:
+  B. 0
+  C. 3
+  D. 1
+
+Correct Answer: D
+
+Explanation:  The code snippet that you have sent is using the count method to count the number of occurrences of a value in a list. The code is as follows: my_list = [1, 2, 3, 4, 5] print(my_list.count(1)) The code starts with creating a list called oemy_list that contains the numbers 1, 2, 3, 4, and 5. Then, i
+
+------------------------------------------------------------------------------------------
+
+QUESTION 22
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+A. 22
+
+Answer Options:
+  B. 12
+  C. 0
+  D. 11
+
+Correct Answer: B
+
+Explanation:  Result Calculation: The for loop iterates over (fruits1, fruits2, fruits3) and checks conditions: If i[0] == 'Cherry', add 1 to res. If i[1] == 'Orange', add 10 to res. Details: For fruits1 = ['Cherry', 'Pear', 'Banana']: i[0] == 'Cherry': True → res += 1 → res = 1. i[1] == 'Orange': False → no cha
+
+------------------------------------------------------------------------------------------
+
+QUESTION 23
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following sentences are true about the code? (Choose two.)
+
+Answer Options:
+  A. nums and vals are different lists
+  B. vals is longer than nums
+  C. nums and vals are different names of the same list
+  D. nums and vals have the same length
+
+Correct Answer: CD
+
+Explanation:  The two true sentences about the code are: C. nums and vals are different names of the same list D. nums and vals have the same length Explanation: When you assign vals = nums, vals becomes a reference to the same list that nums refers to. Therefore, any changes made to the list through either nums
+
+------------------------------------------------------------------------------------------
+
+QUESTION 24
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 3
+  C. 6
+  D. 7
+
+Correct Answer: C
+
+Explanation:  The expected output of the given code is 6. Here's a step-by-step explanation of how the code works: An empty dictionary data is created. The key 1 is assigned the value 1, so data becomes {1: 1}. The key '1' (a string) is assigned the value 2, so data becomes {1: 1, '1': 2}. The key 1.0 (a float) 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 25
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. Paul
+  B. Mary
+  C. The code is erroneous.
+  D. None of the above.
+
+Correct Answer: 
+
+Explanation:  The expression int(-1 / 2) prints Peter because of the way integer division and type conversion work in Python. Let's break it down step by step: Division Operation: When you perform the division -1 / 2, the result is -0.5. Type Conversion: The int function converts a floating-point number to an in
+
+------------------------------------------------------------------------------------------
+
+QUESTION 26
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 1 1 2 3 4 5
+  B. 2 3 4 5 6 1
+  C. 2 3 4 5 6 6
+  D. 1 2 3 4 5 6
+
+Correct Answer: C
+
+Explanation:  data = [1, 2, 3, 4, 5, 6] In the first for loop, the code updates each element of data from index 0 to 4 with the value of the next element: for i in range(1, 6): data[i - 1] = data[i] This loop will perform the following assignments: When i = 1: data[0] = data[1] → data = [2, 2, 3, 4, 5, 6] When i
+
+------------------------------------------------------------------------------------------
+
+QUESTION 27
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. efg
+  B. abc
+  C. def
+  D. The code is erroneous.
+
+Correct Answer: A
+
+Explanation:  The max() function returns the largest item in an iterable. When applied to a list of strings, it compares the strings lexicographically (i.e., based on the ASCII values of the characters). In this case, the comparison is done character by character from left to right. Here's how the comparison wor
+
+------------------------------------------------------------------------------------------
+
+QUESTION 28
+------------------------------------------------------------------------------------------
+Question Text:
+What is the output of the following snippet?
+
+Answer Options:
+  A. 2
+  B. 4
+  C. The snippet is erroneous (invalid syntax)
+
+Correct Answer: B
+
+Explanation:  Initial Code: tup = (1, ) + (1, ) (1, ) is a tuple with a single element, 1. (1, ) + (1, ) concatenates two tuples, resulting in (1, 1). So now: tup = (1, 1) tup = tup + tup tup is (1, 1). Concatenating tup + tup results in (1, 1, 1, 1). So now: tup = (1, 1, 1, 1) print(len(tup)) len(tup) calculate
+
+------------------------------------------------------------------------------------------
+
+QUESTION 29
+------------------------------------------------------------------------------------------
+Question Text:
+What is the output of the following snippet?
+
+Answer Options:
+  A. [1, 2, 3, 1, 2, 3]
+  B. [3, 2, 1, 1, 2, 3]
+  C. [1, 1, 1, 1, 2, 3]
+  D. [1, 2, 3, 3, 2, 1]
+
+Correct Answer: C
+
+Explanation:  1. You start with the list `l1 = [1, 2, 3]`. 2. You iterate through the range of the length of `l1`, which initially is 3. 3. During each iteration, you insert the value at the current index `v` into the second position of the list (index 1). Here's the detailed iteration breakdown: - Initial `l1 =
+
+------------------------------------------------------------------------------------------
+
+QUESTION 30
+------------------------------------------------------------------------------------------
+Question Text:
+Which one of the lines should you put in the snippet below to match the expected output?
+Expected output:
+Code:
+
+A. sorted(list)
+
+Answer Options:
+  B. sort(list)
+  C. list.sort()
+  D. list.sorted()
+
+Correct Answer: C
+
+Explanation:  To achieve the expected output [1, 2, 4, 7] from the list [2, 7, 1, 4], you should use the list.sort() method, which sorts the list in place. Here is the complete code snippet: Copy list = [2, 7, 1, 4] list.sort() # This sorts the list in place print(list) So, the correct line to use is: C. list.so
+
+------------------------------------------------------------------------------------------
+
+QUESTION 31
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 0
+  B. 1
+  C. False
+  D. True
+
+Correct Answer: D
+
+Explanation:  he expected output of the given code is True. Here's a breakdown of why: data1 = 'a', 'b' creates a tuple with two elements, 'a' and 'b'. data2 = ('a', 'b') also creates a tuple with two elements, 'a' and 'b'. In Python, tuples can be created either by using parentheses or by simply separating elem
+
+------------------------------------------------------------------------------------------
+
+QUESTION 32
+------------------------------------------------------------------------------------------
+Question Text:
+Take a look at the snippet and choose one of the following statements which is true:
+
+A. vals is longer than nums
+
+Answer Options:
+  B. nums and vals are of the same length
+  C. nums is longer than vals
+
+Correct Answer: B
+
+Explanation:  In Python, lists are mutable objects. The assignment vals = nums does not create a new list; it simply creates a reference to the same list object. Therefore, both nums and vals point to the same underlying list. When vals.append(1) is executed, it modifies the shared list. As a result, both nums a
+
+------------------------------------------------------------------------------------------
+
+QUESTION 33
+------------------------------------------------------------------------------------------
+Question Text:
+Insert the correct snippet to convert the t tuple to a dictionary named d.
+Expected output:
+
+Code:
+
+Answer Options:
+  A. t >> d.dict
+  B. d = dict(t)
+  C. d.dict(t)
+  D. d = t(dict)
+
+Correct Answer: B
+
+Explanation:  The correct snippet to convert the tuple `t` to a dictionary named `d` is: B. `d = dict(t)` So the full code will be: t = (('A', 1), ('B', 2), ('C', 3)) d = dict(t) print(d) The expected output will be: {'A': 1, 'B': 2, 'C': 3}
+
+------------------------------------------------------------------------------------------
+
+QUESTION 34
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+A. [3, 1, 25, 5, 20, 5, 4]
+
+Answer Options:
+  B. [1, 3, 4, 5, 20, 5, 25]
+  C. [3, 5, 20, 5, 25, 1, 3]
+  D. [1, 3, 3, 4, 5, 5, 20, 25]
+
+Correct Answer: C
+
+Explanation:  The list nums is initialized as: nums = [3, 4, 5, 20, 5, 25, 1, 3] The method pop(1) is called. The pop() method removes the element at the specified index and returns it. Here, 1 is the index, so the element at index 1 (which is 4) is removed. After nums.pop(1), the list becomes: nums = [3, 5, 20,
+
+------------------------------------------------------------------------------------------
+
+QUESTION 35
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. (2, 1, 1)
+  B. (1, 1, 1)
+  C. (2, 2, 2)
+  D. The code is erroneous.
+
+Correct Answer: D
+
+Explanation:  The tuple data = (1,) * 3 creates a tuple containing three elements: (1, 1, 1). Tuples in Python are immutable, meaning their elements cannot be modified after creation. The statement data[0] = 2 attempts to modify the first element of the tuple, which is not allowed. Because of the immutability of
+
+------------------------------------------------------------------------------------------
+
+QUESTION 36
+------------------------------------------------------------------------------------------
+Question Text:
+What is the output of the following snippet?
+
+A. [1, 2, 3]
+
+Answer Options:
+  B. [3, 3, 3]
+  C. [3, 2, 1]
+  D. [1, 1, 1]
+
+Correct Answer: C
+
+Explanation:  The code iterates over each element v in my_list_1 and inserts v at the beginning (index 0) of my_list2. This results in reversing the order of the elements from my_list_1 in my_list2. Here is the step-by-step process: v = 1 -> my_list2.insert(0, 1) -> my_list2 becomes [1] v = 2 -> my_list2.insert(
+
+------------------------------------------------------------------------------------------
+
+QUESTION 37
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. three
+  B. ('one', 'two', 'three')
+  C. two
+  D. one
+
+Correct Answer: D
+
+Explanation:  Code breakdown: Initialization: data = {'one': 'two', 'two': 'three', 'three': 'one'} res = data['three'] # res = 'one' Loop execution: for _ in range(len(data)): # len(data) = 3 res = data[res] The loop runs 3 times (since len(data) = 3). Iterations: First iteration: res = data[res] = data['one'] 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 38
+------------------------------------------------------------------------------------------
+Question Text:
+What code would you insert instead of the comment to obtain the expected output?
+Expected output:
+
+Code:
+
+Answer Options:
+  A. print(k[0])
+  B. print(k)
+  C. print(k['0'])
+  D. print(k["0"])
+
+Correct Answer: A
+
+Explanation:  dict = {} list = ['a', 'b', 'c', 'd'] for i in range(len(list)-1): dict[list[i]] = (list[i],) >>> adding list's element to the dictionary by creating a tuple containing a single list element >>> dict = {'a': ('a',), 'b': ('b',), 'c': ('c',)} for i in sorted(dict.keys()): k = dict[i] print(k[0]) >>>
+
+------------------------------------------------------------------------------------------
+
+QUESTION 39
+------------------------------------------------------------------------------------------
+Question Text:
+What is the output of the following snippet?
+
+Answer Options:
+  A. -2
+  B. 3
+  C. -1
+  D. 1
+
+Correct Answer: D
+
+Explanation:  my_list = [3, 1, -2] print(my_list[my_list[-1]]) my_list[-1] retrieves the last element of the list, which is -2. Then, my_list[my_list[-1]] becomes my_list[-2], which is the second-to-last element of the list. my_list[-2] is 1 (the second-to-last element in the list [3, 1, -2]). Therefore, the out
+
+------------------------------------------------------------------------------------------
+
+QUESTION 40
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. {(2, 3): 2}
+  B. {(1, 2): 1}
+  C. The code is erroneous.
+  D. 1
+
+Correct Answer: D
+
+Explanation:  In the given code, you have a dictionary `x` where the keys are tuples and the values are integers. The dictionary is defined as: x = {(1, 2): 1, (2, 3): 2} When you access the value associated with the key `(1, 2)` using `x[1, 2]`, you are essentially looking for the value stored for the key `(1, 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 41
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 7 23 42
+  B. 7 42 23
+  C. 42 23 7
+
+Correct Answer: B
+
+Explanation:  The code provided will output the values of the dictionary data in the order of their keys sorted alphabetically. Here is a step-by-step explanation: The dictionary data is defined as {'z': 23, 'x': 7, 'y': 42}. The sorted(data) function sorts the keys of the dictionary alphabetically, resulting in
+
+------------------------------------------------------------------------------------------
+
+QUESTION 42
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. (1, 2)
+  B. The code is erroneous.
+  C. {'a':1, 'b':2}
+  D. [1,2]
+
+Correct Answer: B
+
+Explanation:  In the given code: data = {'a': 1, 'b': 2, 'c': 3} print(data['a', 'b']) data is a dictionary with keys 'a', 'b', and 'c'. When trying to access dictionary values, the key provided must be a single hashable object. In this case, ['a', 'b'] is a tuple (('a', 'b')), not a valid key in the dictionary.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 43
+------------------------------------------------------------------------------------------
+Question Text:
+The fact that tuples belong to sequence types means:
+
+Answer Options:
+  A. they can be modified using the del instruction
+  B. they can be extended using the .append() method
+  C. they are actually lists
+  D. they can be indexed and sliced like lists
+
+Correct Answer: D
+
+Explanation:  Tuples are immutable sequence types in Python, meaning they cannot be modified (no item assignment or deletion) and do not have methods like .append() for extension. However, like other sequence types such as strings and lists, tuples support indexing and slicing to access their elements.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 44
+------------------------------------------------------------------------------------------
+Question Text:
+Which function does in-place reversal of objects in a list?
+
+Answer Options:
+  A. list.sort([func])
+  B. list.pop(obj=list[-1])
+  C. list.remove(obj)
+  D. list.reverse()
+
+Correct Answer: D
+
+Explanation:  The list.reverse() method reverses the elements of the list in place, meaning it modifies the original list directly without creating a new list. This is the function that performs an in-place reversal of objects in a list.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 45
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. ['1', '2', '3', '4']
+  B. (1, 2, 3, 4)
+  C. ('1', '2', '3', '4')
+  D. The code is erroneous.
+
+Correct Answer: C
+
+Explanation:  data1 = '1', '2': This is a tuple assignment. In Python, writing values separated by commas without parentheses creates a tuple. So, data1 becomes ('1', '2'). data2 = ('3', '4'): This explicitly creates a tuple with parentheses. So, data2 becomes ('3', '4'). data1 + data2: The + operator concatenat
+
+------------------------------------------------------------------------------------------
+
+QUESTION 46
+------------------------------------------------------------------------------------------
+Question Text:
+An alternative name for a data structure called a stack is:
+
+Answer Options:
+  A. LIFO
+  B. FIFO
+  C. FOLO
+
+Correct Answer: A
+
+Explanation:  LIFO stands for "Last In, First Out," which describes the behavior of a stack. The last element added to the stack is the first one to be removed.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 47
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. [7, 3, 23, 42]
+  B. [7, 20, 23, 42]
+  C. [10, 20, 42]
+  D. [10, 20, 23, 42]
+
+Correct Answer: B
+
+Explanation:  Let's analyze the code step by step: w = [7, 3, 23, 42] x = w[1:] y = w[1:] z=w y[0] = 10 z[1] = 20 print(w) w = [7, 3, 23, 42]: A list w is created with the values [7, 3, 23, 42]. x = w[1:]: This creates a new list x that is a slice of w, starting from index 1, i.e., x = [3, 23, 42]. Note that thi
+
+------------------------------------------------------------------------------------------
+
+QUESTION 48
+------------------------------------------------------------------------------------------
+Question Text:
+What is the output of the following code?
+
+Answer Options:
+  A. [1, 1, 1]
+  B. [3, -1, 1]
+  C. [3, 1, 1]
+
+Correct Answer: C
+
+Explanation:  Initialization of the list: my_list = [3, 1, -1] At this point, my_list is [3, 1, -1]. Assignment operation: my_list[-1] = my_list[-2] Here: my_list[-1] refers to the last element of the list (-1). my_list[-2] refers to the second-to-last element of the list (1). The operation assigns the value of 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 49
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following sentences is true?
+
+Answer Options:
+  A. str1 and str2 are different (but equal) strings.
+  B. str1 and str2 are different names of the same strings.
+  C. str1 is longer than str2
+  D. str2 is longer than str1
+
+Correct Answer: 
+
+Explanation:  if we print the id of both str1 and str2 it will give the same id. Hence, both are referring to the same memory location, which means both are sharing the same memory.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 50
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. The code is erroneous.
+  B. 6
+  C. 5
+  D. 4
+
+Correct Answer: D
+
+Explanation:  Creating the data variable: data = ((1, 2),) * 7 The tuple (1, 2) is wrapped inside another tuple, ((1, 2),). This tuple is repeated 7 times using the * operator, creating: data = ((1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (1, 2)) Slicing data: data[3:8] Slicing starts from index 3 (inclusive
+
+------------------------------------------------------------------------------------------
+
+QUESTION 51
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. The program will cause an error.
+  B. (1, 4, 9)
+  C. ('A', 'D', 'Z')
+
+Correct Answer: C
+
+Explanation:  Four tuples are defined: t1 = (1, 4, 9) t2 = ('A', 'D', 'Z') t3 = (True, False, None) t4 = (5.0, 7.5, 9.9) The next line performs tuple unpacking: t1, t3 = t2, t4 Here, t1 is assigned the value of t2 and t3 is assigned the value of t4. After this line: t1 now refers to ('A', 'D', 'Z') t3 now refers
+
+------------------------------------------------------------------------------------------
+
+QUESTION 52
+------------------------------------------------------------------------------------------
+Question Text:
+How would you remove all the items from the d dictionary?
+Expected output:
+Code:
+
+Answer Options:
+  A. d.del()
+  B. d.remove()
+  C. del d
+  D. d.clear()
+
+Correct Answer: D
+
+Explanation:  d.clear() removes all items from the dictionary without deleting the dictionary itself. Other options: d.del() and d.remove() are invalid as these methods do not exist for dictionaries. del d deletes the dictionary entirely, resulting in d no longer being defined. Example: d = {'A': 1, 'B': 2, 'C':
+
+------------------------------------------------------------------------------------------
+
+QUESTION 53
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. [4, 3, 2, 1]
+  C. [4, 3]
+  D. The code is erroneous.
+
+Correct Answer: B
+
+Explanation:  Initial List The initial list a is [1, 2, 3, 4, 5]. Slicing Operation The slicing operation is a[3:0:-1]. The slicing syntax is list[start:stop:step]: start is the index where the slice starts (inclusive). stop is the index where the slice ends (exclusive). step is the step size or the direction of
+
+------------------------------------------------------------------------------------------
+
+QUESTION 54
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+A. 2
+
+Answer Options:
+  B. 1
+  C. The code is erroneous.
+  D. 3
+
+Correct Answer: C
+
+Explanation:  The code is erroneous. The error occurs in the line print(len(crates[box])). The key box is not a string but a dictionary, which is not a valid key type for a dictionary in Python. Dictionary keys must be of an immutable type, such as strings, numbers, or tuples containing only immutable types. To 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 55
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. ('Peter': 30, 'Paul': 31)
+  B. ('Peter', 'Paul')
+  C. ['Peter': 30, 'Paul': 31]
+  D. ['Peter', 'Paul']
+
+Correct Answer: 
+
+Explanation:  The expected output of the code is: data.keys() returns a view object that displays a list of all the keys in the dictionary data. list(data.keys()) converts this view object into a list, which contains the keys of the dictionary. The print statement outputs this list.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 56
+------------------------------------------------------------------------------------------
+Question Text:
+Consider the following list.
+data = [1, 5, 10, 19, 55, 30, 55, 99]
+Which of the code snippets below would produce a new list like the following?
+[1, 5, 10, 99]
+A.
+
+B.
+
+Answer Options:
+  C. None of the above.
+
+Correct Answer: D
+
+Explanation:  data.pop(5) removes the element at index 5 (which is 30), leaving [1, 5, 10, 19, 55, 55, 99]. data.remove(19) removes the first occurrence of 19, leaving [1, 5, 10, 55, 55, 99]. data.remove(55) removes the first occurrence of 55, leaving [1, 5, 10, 55, 99]. data.remove(55) removes the second occurr
+
+------------------------------------------------------------------------------------------
+
+QUESTION 57
+------------------------------------------------------------------------------------------
+Question Text:
+What will be the output of the following code snippet?
+
+A. 3
+
+Answer Options:
+  B. 2
+  C. 4
+  D. 1
+
+Correct Answer: C
+
+Explanation:  Here's the breakdown of the code and its execution: Code Breakdown: d = {} Initializes an empty dictionary d. d[1] = 1 Adds a key-value pair to the dictionary: key 1 (an integer) with value 1. d['1'] = 2 Adds another key-value pair to the dictionary: key '1' (a string) with value 2. Note: 1 (intege
+
+------------------------------------------------------------------------------------------
+
+QUESTION 58
+------------------------------------------------------------------------------------------
+Question Text:
+Which one of the lines should you put in the snippet below to match the expected output?
+Expected output:
+
+Code:
+
+Answer Options:
+  A. reverse(list)
+  B. list.reversed()
+  C. list.reverse()
+  D. reversed(list)
+
+Correct Answer: C
+
+Explanation:  A. reverse(list): This is incorrect because reverse() is not a standalone function; it is a method of the list object. B. list.reversed(): This is incorrect because reversed() is not a method of the list object. Instead, reversed(list) returns an iterator, not a modified list. C. list.reverse(): Th
+
+------------------------------------------------------------------------------------------
+
+QUESTION 59
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 2 4
+  B. 1 3
+  C. 3 1
+  D. 4 2
+
+Correct Answer: A
+
+Explanation:  The dictionary data is created with two keys: '2' and '1'. data['2'] = [1, 2] data['1'] = [3, 4] The for loop iterates over the keys of the dictionary data. For each key i, the code prints the second element (index 1) of the corresponding list. For the key '2', data['2'][1] is 2. For the key '1', d
+
+------------------------------------------------------------------------------------------
+
+QUESTION 60
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. The code is erroneous.
+  B. 2
+  C. 1
+  D. 0
+
+Correct Answer: A
+
+Explanation:  The code provided will result in an IndexError. Let's break it down step by step to understand why: data = [[0, 1, 2, 3] for i in range(2)] print(data[2][0]) The list comprehension [[0, 1, 2, 3] for i in range(2)] generates a list of lists. The range(2) means that the outer list will have 2 element
+
+------------------------------------------------------------------------------------------
+
+QUESTION 61
+------------------------------------------------------------------------------------------
+Question Text:
+How many elements does the L list contain?
+
+A. one
+
+Answer Options:
+  B. two
+  C. three
+  D. zero
+
+Correct Answer: D
+
+Explanation:  The given list comprehension is: L = [i for i in range(-1, -2)] The range(start, stop) function generates numbers starting from start and stops before stop. In this case, range(-1, -2) starts at -1 but stops before -2, and since -1 > -2, the range produces no numbers. As a result, the list comprehe
+
+------------------------------------------------------------------------------------------
+
+QUESTION 62
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 0 1
+  B. 1 0
+  C. The code is erroneous.
+  D. 0 0
+
+Correct Answer: C
+
+Explanation:  The code you provided contains an error. Specifically, the method vals() does not exist for dictionary objects in Python. The correct method to retrieve the values of a dictionary is values(). Here's the corrected version of the code: data = {'1': '0', '0': '1'} for d in data.values(): print(d, end
+
+------------------------------------------------------------------------------------------
+
+QUESTION 63
+------------------------------------------------------------------------------------------
+Question Text:
+Take a look at the snippet, and choose the true statements: (Choose two.)
+
+Answer Options:
+  A. nums is longer than vals
+  C. vals is longer than nums
+  D. nums and vals refer to the same list
+
+Correct Answer: BD
+
+Explanation:  nums = [1, 2, 3] Creates a list nums with three elements: [1, 2, 3]. vals = nums The variable vals is assigned the same reference as nums. Now both vals and nums point to the same list object in memory. del vals[1:2] The slice vals[1:2] selects the element at index 1 (value 2). The del statement re
+
+------------------------------------------------------------------------------------------
+
+QUESTION 64
+------------------------------------------------------------------------------------------
+Question Text:
+Take a look at the snippet and choose one of the following statements which is true:
+
+Answer Options:
+  A. nums and vals are of the same length
+  B. nums is longer than vals
+  C. vals is longer than nums
+
+Correct Answer: C
+
+Explanation:  Let's analyze the given code snippet step-by-step to determine which statement is true: nums = [] vals = nums[:] vals.append(1) nums = [] nums is initialized as an empty list: []. vals = nums[:] vals is created as a shallow copy of nums. Since nums is an empty list, vals will also be an empty list:
+
+------------------------------------------------------------------------------------------
+
+QUESTION 65
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. (2)
+  B. (2,)
+  C. 2
+  D. The code is erroneous.
+
+Correct Answer: C
+
+Explanation:  data = (1, 2, 4, 8) Here, data is a tuple: (1, 2, 4, 8). data = data[1:-1] This slices the tuple starting from index 1 and ending at index -1. So, it extracts the elements between index 1 and index -1, excluding the element at index -1. The result is: (2, 4). data = data[0] Now, data is a tuple (2,
+
+------------------------------------------------------------------------------------------
+
+QUESTION 66
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+A. [1, 10, 3, 20, 5, 30, 7, 40, 9, 50, 60]
+
+Answer Options:
+  B. [1, 2, 10, 20, 30, 40, 50, 60]
+  C. The code is erroneous.
+  D. [10, 2, 20, 4, 30, 6, 40, 8, 50, 60]
+
+Correct Answer: C
+
+Explanation:  The code will result in an error because you are trying to assign 6 values (10, 20, 30, 40, 50, 60) to every other element of the list x, which has only 5 positions (1, 3, 5, 7, 9) available for assignment. The lengths do not match, and thus it raises a ValueError.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 67
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. False
+  B. 1
+  C. 0
+  D. True
+
+Correct Answer: A
+
+Explanation:  data.copy() creates a shallow copy of the dictionary data. The new dictionary (person) contains the same keyvalue pairs but resides at a different memory location. id(data) retrieves the memory address of the data dictionary. id(person) retrieves the memory address of the person dictionary. Since t
+
+------------------------------------------------------------------------------------------
+
+QUESTION 68
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+print(list('hello'))
+
+Answer Options:
+  A. hello
+  B. [h, e, l, l, o]
+  C. ['h', 'e', 'l', 'l', 'o']
+  D. ['h' 'e' 'l' 'l' 'o']
+
+Correct Answer: C
+
+Explanation:  The string 'hello' is passed to the list() function. list() converts the string into a list, where each character of the string becomes an individual element of the list. The resulting list "['h', 'e', 'l', 'l', 'o']" is then printed. Each character from the string 'hello' becomes a separate string
+
+------------------------------------------------------------------------------------------
+
+QUESTION 69
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. [1, 3]
+  B. [1, 4]
+  C. [4, 3]
+  D. [1, 3, 4]
+
+Correct Answer: C
+
+Explanation:  ist1 = [1, 3] This creates a list list1 with elements [1, 3]. list2 = list1 This does not create a new list. Instead, list2 is a reference to the same list object that list1 points to. Both list1 and list2 now refer to the same memory location. list1[0] = 4 This modifies the first element of the li
+
+------------------------------------------------------------------------------------------
+
+QUESTION 70
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. ['Peter', 404, 3.03, 'Wellert', 33.3]
+  B. None of the above.
+  C. [404, 3.03]
+  D. ['Peter', 'Wellert']
+
+Correct Answer: C
+
+Explanation:  The code performs the following steps: 1. `data = ['Peter', 404, 3.03, 'Wellert', 33.3]`: Initializes the list `data` with the elements `['Peter', 404, 3.03, 'Wellert', 33.3]`. 2. `print(data[1:3])`: Slices the list `data` starting from index `1` up to, but not including, index `3`, and prints the 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 71
+------------------------------------------------------------------------------------------
+Question Text:
+What will be the output of the following code snippet?
+
+Answer Options:
+  A. [1, 3, 5, 7, 9]
+  B. [8, 9]
+  C. [1, 2, 3]
+  D. [1, 2]
+
+Correct Answer: A
+
+Explanation:  a[::2] uses Python slicing syntax: The first : indicates the starting point (default is the beginning of the list). The second : indicates the stopping point (default is the end of the list). The 2 after the second colon is the step size, which means it skips every second element. Starting from the
+
+------------------------------------------------------------------------------------------
+
+QUESTION 72
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 1 5 9 13
+  B. 1 2 3 4
+  C. 13 14 15 16
+  D. 4 8 12 16
+
+Correct Answer: D
+
+Explanation:  The provided code iterates over each sublist in the data list and removes (and prints) the last element from each sublist using the pop() method. The pop() method removes and returns the last item in the list if no index is specified. the expected output of the code is: 4 8 12 16
+
+------------------------------------------------------------------------------------------
+
+QUESTION 73
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 2
+  B. 4
+  C. 5
+  D. 3
+
+Correct Answer: B
+
+Explanation:  x = [0, 1, 2] # Step 1: x is initialized as [0, 1, 2]. x.insert(0, 1) # Step 2: Inserts 1 at index 0. x becomes [1, 0, 1, 2]. del x[1] # Step 3: Deletes the element at index 1. x becomes [1, 1, 2]. print(sum(x)) # Step 4: Calculates the sum of elements in x, which is 1 + 1 + 2 = 4. Result: The outp
+
+------------------------------------------------------------------------------------------
+
+QUESTION 74
+------------------------------------------------------------------------------------------
+Question Text:
+You develop a Python application for your company.
+A list named employees contains 200 employee names, the last five being company management. You need to
+slice the list to display all employees excluding management.
+Which code segments can you use? (Choose two.)
+
+Answer Options:
+  A. employees[1:-5]
+  B. employees[0:-5]
+  C. employees[:-5]
+  D. employees[0:-4]
+
+Correct Answer: BC
+
+Explanation:  To slice the list to display all employees excluding the last five who are company management, you can use the following code segments: B. employees[0:-5] C. employees[:-5] Both of these options will correctly exclude the last five elements from the list.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 75
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+A. 0
+
+Answer Options:
+  B. 1
+  C. The code is erroneous.
+  D. 2
+
+Correct Answer: A
+
+Explanation:  et's go through the code step by step: The dictionary data is defined as {1: 0, 2: 1, 3: 2, 0: 1}. The variable x is initialized to 0. The for loop runs len(data) times, which is 4 times since the length of the dictionary data is 4. Let's trace the value of x through each iteration of the loop: Ite
+
+------------------------------------------------------------------------------------------
+
+QUESTION 76
+------------------------------------------------------------------------------------------
+Question Text:
+After execution of the following snippet, the sum of all vals elements will be equal to:
+
+Answer Options:
+  A. 4
+  B. 5
+  C. 2
+  D. 3
+
+Correct Answer: A
+
+Explanation:  et's analyze the given code snippet step-by-step to determine the sum of all elements in the vals list after execution: vals = [0, 1, 2] Initially, vals is set to [0, 1, 2]. vals.insert(0, 1) This inserts the element 1 at index 0. After this operation, vals becomes [1, 0, 1, 2]. del vals[1] This de
+
+------------------------------------------------------------------------------------------
+
+QUESTION 77
+------------------------------------------------------------------------------------------
+Question Text:
+What is the output of the following code?
+
+Answer Options:
+  A. The output cannot be predicted.
+  B. 2
+  C. The program will cause an error.
+  D. 1
+
+Correct Answer: B
+
+Explanation:  1. `a` is assigned the value `1`. 2. `b` is assigned the value `0`. Next, we evaluate the expression `x = a or b`: - The `or` operator returns the first truthy value it encounters, or the last value if none are truthy. - `a` is `1`, which is truthy, so `x` will be `1`. Then, we evaluate the express
+
+------------------------------------------------------------------------------------------
+
+QUESTION 78
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+A. 4
+
+Answer Options:
+  B. 10
+  C. Nothing gets printed.
+  D. The code is erroneous.
+
+Correct Answer: B
+
+Explanation:  The given code concatenates two tuples data1 and data2 to form a new tuple and then sums up its elements. Here is the step-by-step data1 = (1, 2) data2 = (3, 4) The expression data1 + data2 concatenates the two tuples to form a single tuple (1, 2, 3, 4). The list comprehension [print(sum(x)) for x 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 79
+------------------------------------------------------------------------------------------
+Question Text:
+What is the output of the following code?
+
+Answer Options:
+  A. The program will cause an error.
+  B. False
+  C. None
+  D. True
+
+Correct Answer: D
+
+Explanation:  Let's analyze the code step by step: 1. `a = 10`: This assigns the value 10 to the variable `a`. 2. `b = 20`: This assigns the value 20 to the variable `b`. 3. `c = a > b`: This compares whether `a` is greater than `b`. Since `10` is not greater than `20`, the result is `False`. Therefore, `c` is a
+
+------------------------------------------------------------------------------------------
+
+QUESTION 80
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+x = 28
+y=8
+print(x / y)
+print(x // y)
+print(x % y)
+
+Answer Options:
+  A. 1 | 3.0
+  B. 1 | 3.5
+  C. 1 | 3
+  D. 1 | 3.5
+
+Correct Answer: B
+
+Explanation:  he expected output of the code is: x = 28 y=8 print(x / y) # This performs floating-point division print(x // y) # This performs integer (floor) division print(x % y) # This calculates the remainder of the division Let's calculate each step: 1. `x / y` performs floating-point division: \( 28 / 8 = 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 81
+------------------------------------------------------------------------------------------
+Question Text:
+What would you insert instead of ???, so that the program checks for even numbers?
+
+Answer Options:
+  A. x % ‘even’ == True
+  B. x % 2 == 1
+  D. x % x == 0
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 82
+------------------------------------------------------------------------------------------
+Question Text:
+A data structure described as LIFO is actually a:
+
+Answer Options:
+  A. stack
+  B. tree
+  C. list
+  D. heap
+
+Correct Answer: A
+
+Explanation:  LIFO stands for "Last In, First Out," which is a characteristic of a stack data structure. In a stack, the last element added is the first one to be removed.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 83
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+x = 1 // 5 + 1 / 5
+print(x)
+
+Answer Options:
+  A. 0
+  B. 0.2
+  C. 0.0
+  D. 0.4
+
+Correct Answer: B
+
+Explanation:  First, 1 // 5 is calculated. The // operator performs integer (floor) division. 1 // 5 results in 0 because 1 divided by 5 is 0 with a remainder of 1, and the floor division discards the remainder. Next, 1 / 5 is calculated. The / operator performs true division (floating-point division). 1 / 5 res
+
+------------------------------------------------------------------------------------------
+
+QUESTION 84
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+print(1 // 2 * 3)
+
+Answer Options:
+  A. 4.5
+  C. 0.0
+  D. 0
+
+Correct Answer: D
+
+Explanation:  Actually, in Python, both multiplication (*) and floor division (//) have the same precedence level, and they are evaluated from left to right. So, in the given code print(1 // 2 * 3): 1 // 2 is evaluated first, resulting in 0 because 1 divided by 2 is 0.5 and the floor division of 0.5 is 0. Then, 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 85
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. The code is erroneous.
+  B. 1
+  C. 0
+  D. None
+
+Correct Answer: C
+
+Explanation:  The given Python code snippet defines an empty tuple and prints its length using the __len__() method. Code: data = () print(data.__len__()) data = () initializes an empty tuple. data.__len__() is a method that returns the number of items in the tuple. Since the tuple is empty, the length is 0.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 86
+------------------------------------------------------------------------------------------
+Question Text:
+How many elements does the my_list list contain?
+
+Answer Options:
+  A. one
+  B. three
+  C. two
+
+Correct Answer: C
+
+Explanation:  The list my_list is created using a list comprehension. The expression [0 for i in range(1, 3)] generates a list containing the value 0 for each number in the range from 1 to 2 (inclusive of 1 and exclusive of 3). So, the range range(1, 3) produces two numbers: 1 and 2. Therefore, the list my_list 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 87
+------------------------------------------------------------------------------------------
+Question Text:
+The result of the following addition:
+123 + 0.0
+
+Answer Options:
+  A. cannot be evaluated
+  B. is equal to 123
+  C. is equal to 123.0
+
+Correct Answer: C
+
+Explanation:  The result of the addition 123 + 0.0 is equal to 123.0.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 88
+------------------------------------------------------------------------------------------
+Question Text:
+What is the output of the following snippet?
+
+Answer Options:
+  A. two
+  B. one
+  C. (‘one’, ‘two’, ‘three’)
+  D. three
+
+Correct Answer: A
+
+Explanation:  Initialization: dictionary is a dictionary: {'one': 'two', 'three': 'one', 'two': 'three'}. v is initialized to dictionary['one'], which is 'two'. For Loop Iterations: First iteration (k = 0): Current value of v is 'two'. v = dictionary['two'] ? 'two' maps to 'three'. So, v = 'three'. Second iterat
+
+------------------------------------------------------------------------------------------
+
+QUESTION 89
+------------------------------------------------------------------------------------------
+Question Text:
+What is the output of the following snippet?
+
+Answer Options:
+  A. 1
+  B. 0
+  C. 6
+
+Correct Answer: B
+
+Explanation:  The given Python snippet multiplies the value of x by each element in my_list. Let's break down the execution step by step: my_list = [0, 1, 2, 3] This initializes the list my_list with the elements [0, 1, 2, 3]. x=1 This initializes x with the value 1. for elem in my_list: This starts a loop where
+
+------------------------------------------------------------------------------------------
+
+QUESTION 90
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+x = 1 / 2 + 3 // 3 + 4 ** 2
+print(x)
+
+Answer Options:
+  A. 17
+  B. 17.5
+  C. 8.5
+  D. 8
+
+Correct Answer: B
+
+Explanation:  1 / 2 evaluates to 0.5 (division) 3 // 3 evaluates to 1 (integer division) 4 ** 2 evaluates to 16 (exponentiation) Now we add these results together: 0.5 + 1 + 16 = 17.5 So, the correct output of the code is 17.5.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 91
+------------------------------------------------------------------------------------------
+Question Text:
+What will be the output of the following code snippet?
+print(3 / 5)
+
+Answer Options:
+  A. None of the above.
+  B. 0
+  C. 0.6
+  D. 6/10
+
+Correct Answer: C
+
+Explanation:  The output of the code snippet print(3 / 5) will be: 0.6
+
+------------------------------------------------------------------------------------------
+
+QUESTION 92
+------------------------------------------------------------------------------------------
+Question Text:
+What is the output of the following snippet?
+
+Answer Options:
+  A. 12
+  B. (2, 1)
+  D. 21
+
+Correct Answer: D
+
+Explanation:  To determine the output of this code, let's go through it step by step: dct = {} creates an empty dictionary. dct['1'] = (1, 2) adds a key-value pair to the dictionary. The key is the string '1', and the value is the tuple (1, 2). dct['2'] = (2, 1) adds another key-value pair. The key is the string
+
+------------------------------------------------------------------------------------------
+
+QUESTION 93
+------------------------------------------------------------------------------------------
+Question Text:
+Only one of the following statements is true - which one?
+
+Answer Options:
+  A. addition precedes multiplication
+  B. multiplication precedes addition
+  C. neither statement can be evaluated
+
+Correct Answer: B
+
+Explanation:  In the order of operations (PEMDAS/BODMAS), multiplication is performed before addition.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 94
+------------------------------------------------------------------------------------------
+Question Text:
+Analyze the following code fragments that assign a boolean value to the variable even?
+
+A. All three are correct, but Code-2 is preferred.
+
+Answer Options:
+  B. All three are correct, but Code-3 is preferred.
+  C. Code-3 has a syntax error because you attempt to assign a number to even.
+  D. All three are correct, but Code-1 is preferred.
+
+Correct Answer: D
+
+Explanation:  Code-1 is more explicit and can be clearer for beginners or those unfamiliar with ternary operators.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 95
+------------------------------------------------------------------------------------------
+Question Text:
+What will be the output of the following code snippet?
+
+Answer Options:
+  A. 1
+  B. 4
+  C. 2
+  D. 3
+
+Correct Answer: B
+
+Explanation:  Let's break down the code snippet step by step: x = 2 assigns the value 2 to the variable x. y = 1 assigns the value 1 to the variable y. x *= y + 1 is equivalent to x = x * (y + 1). First, the expression inside the parentheses is evaluated: y + 1 which is 1 + 1 resulting in 2. Then, the multiplica
+
+------------------------------------------------------------------------------------------
+
+QUESTION 96
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+x = 1 + 1 // 2 + 1 / 2 + 2
+print(x)
+
+Answer Options:
+  A. 3
+  B. 4.0
+  C. 4
+  D. 3.5
+
+Correct Answer: D
+
+Explanation:  Let's break down the expression step by step, considering floor division in Python: x = 1 + 1 // 2 + 1 / 2 + 2 1. The `//` operator (floor division) and `/` operator (float division) have higher precedence than the `+` operator, so they will be evaluated first. 2. Evaluate `1 // 2`: - `1 // 2` resu
+
+------------------------------------------------------------------------------------------
+
+QUESTION 97
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following statements are true? (Choose two.)
+
+Answer Options:
+  A. The result of the / operator is always an integer value.
+  B. The ** operator uses right-sided binding.
+  C. The right argument of the % operator cannot be zero.
+  D. Addition precedes multiplication.
+
+Correct Answer: BC
+
+Explanation:  The two statements that are true are: B. The ** operator uses right-sided binding. C. The right argument of the % operator cannot be zero. Statement A is false because the / operator can result in a floating-point value if the operands are not both integers. Statement D is false because, according 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 98
+------------------------------------------------------------------------------------------
+Question Text:
+You develop a Python application for your company. You have the following code.
+
+Which of the following expressions is equivalent to the expression in the function?
+
+Answer Options:
+  A. (a + b) * (c - d)
+  B. (a + (b * c)) - d)
+  C. (a + ((b * c) - d)
+  D. None of the above.
+
+Correct Answer: D
+
+Explanation:  A does not match because it changes the order of operations by prioritizing addition/subtraction. B will produce a syntax error, as it includes 2 open parentheses, but 3 closing parentheses. C will produce a syntax error, as it includes 3 open parentheses, but 2 closing parentheses. This leaves D a
+
+------------------------------------------------------------------------------------------
+
+QUESTION 99
+------------------------------------------------------------------------------------------
+Question Text:
+Assuming that the following assignment has been successfully executed:
+the_list = ['list', False, 3e8]
+Which of the following expressions evaluate to True ? (Choose two.)
+
+Answer Options:
+  A. int(the_list[2]) == len(the_list)
+  B. the_list[1] in the list
+  C. 300 in the_list and the_list[l]
+  D. the_list.index(False) == 1
+
+Correct Answer: BD
+
+------------------------------------------------------------------------------------------
+
+QUESTION 100
+------------------------------------------------------------------------------------------
+Question Text:
+Consider the following code.
+
+The value eventually assigned to x is equal to:
+
+A. 1
+
+Answer Options:
+  B. 0
+  C. True
+  D. False
+
+Correct Answer: C
+
+Explanation:  In the given code: x=1 x = x == x Here is the step-by-step explanation of what happens: 1. `x` is initially assigned the value `1`. 2. The expression `x == x` is evaluated. Since `x` is `1`, the expression `1 == 1` evaluates to `True`. 3. The result of the expression (`True`) is then assigned back 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 101
+------------------------------------------------------------------------------------------
+Question Text:
+The += operator, when applied to strings, performs:
+
+Answer Options:
+  A. Subtraction
+  B. Concatenation
+  C. Multiplication
+
+Correct Answer: B
+
+Explanation:  The += operator, when applied to strings, appends the right-hand string to the left-hand string, effectively concatenating them.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 102
+------------------------------------------------------------------------------------------
+Question Text:
+How much will the delivery cost be, if the order value is 1700 and the state is FL (Florida)?
+
+A. 120
+
+Answer Options:
+  B. 105
+  C. 80
+  D. 90
+
+Correct Answer: D
+
+Explanation:  order = int(input('Please enter the order value: ')) state = input('Please enter the state (as postal abbreviation): ') delivery = 0 if state in ['NC', 'SC', 'VA']: if order <= 1000: delivery = 70 elif 1000 < order < 2000: delivery = 80 else: delivery = 90 else: delivery = 50 if state in ['GA', 'WV
+
+------------------------------------------------------------------------------------------
+
+QUESTION 103
+------------------------------------------------------------------------------------------
+Question Text:
+What will happen when you attempt to run the following code?
+
+A. The program will not run due to syntax error.
+
+Answer Options:
+  B. The program will run and cause an error.
+  C. The program will fall into infinite loop, printing 1 on each line.
+  D. The program will print 1 on one line only.
+
+Correct Answer: A
+
+------------------------------------------------------------------------------------------
+
+QUESTION 104
+------------------------------------------------------------------------------------------
+Question Text:
+The ** operator:
+
+Answer Options:
+  A. performs duplicated multiplication
+  B. does not exist
+  C. performs floating-point multiplication
+  D. performs exponentiation
+
+Correct Answer: D
+
+Explanation:  In Python, the ** operator is used to raise a number to the power of another number. For example, 2 ** 3 results in 8.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 105
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. ****
+  B. The code is erroneous.
+  C. **
+  D. *
+
+Correct Answer: 
+
+Explanation:  unc(2) means num = 2, so the for loop will execute twice. First iteration (_ = 0): res starts as '*'. res += res doubles res, resulting in res = '**'. Second iteration (_ = 1): res is currently '**'. res += res doubles res again, resulting in res = '****'. After the loop completes, func(2) returns 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 106
+------------------------------------------------------------------------------------------
+Question Text:
+Insert the correct snippet so that the program produces the expected output.
+Expected output:
+
+Code:
+
+Answer Options:
+  A. b = 0 not in list
+  B. b = list[0]
+  C. b = 0 in list
+  D. b = False
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 107
+------------------------------------------------------------------------------------------
+Question Text:
+Assuming that the tuple is a correctly created tuple, the fact that tuples are immutable means that the following
+instruction:
+
+Answer Options:
+  A. is illegal
+  B. may be illegal if the tuple contains strings
+  C. can be executed if and only if the tuple contains at least two elements
+  D. is fully correct
+
+Correct Answer: A
+
+------------------------------------------------------------------------------------------
+
+QUESTION 108
+------------------------------------------------------------------------------------------
+Question Text:
+What is the output of the following snippet?
+
+Answer Options:
+  A. [1, 1, 2, 2]
+  B. [1, 1, 1, 2]
+  C. [1, 2, 1, 2]
+  D. [1, 2, 2, 2]
+
+Correct Answer: B
+
+Explanation:  In Python, when using the insert() method with lists, the index -1 behaves differently from how negative indexing works for accessing elements. Negative index: With insert(-1, value), Python interprets -1 as "insert before the element at index -1". Since -1 refers to the last element for access, in
+
+------------------------------------------------------------------------------------------
+
+QUESTION 109
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. (4)
+  B. 4
+  C. (4,)
+  D. 44
+
+Correct Answer: B
+
+Explanation:  Start: data = (1, 2, 4, 8) (tuple with 4 elements). Slicing: data = data[-2:-1] → data = (4,) (tuple with 1 element, getting the penultimate element 4). Direct access: data = data[-1] → data = 4 (integer, getting the last element of the tuple (4,)). Output: print(data) → 4.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 110
+------------------------------------------------------------------------------------------
+Question Text:
+What would you insert instead of ???, so that the program prints True to the monitor?
+
+Answer Options:
+  A. x < y
+  B. x is not y
+  C. x is y
+  D. x != y
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 111
+------------------------------------------------------------------------------------------
+Question Text:
+What value will be assigned to the x variable?
+
+Answer Options:
+  A. 1
+  B. False
+  C. True
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 112
+------------------------------------------------------------------------------------------
+Question Text:
+Consider the following Python code:
+
+What are the types of the variables distance, amount and country?
+
+A. float, int, str
+
+Answer Options:
+  B. float, str, str
+  C. double, str, float
+  D. float, float, str
+
+Correct Answer: D
+
+Explanation:  1876.23 is a float because it is a number w/o quatations and has a decimal +42E7 is scientific notation for 42 x 10**7, which is a float, and 'Italy" is a string because it has quotation marks.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 113
+------------------------------------------------------------------------------------------
+Question Text:
+Consider the following code snippet:
+
+Which of the variables will contain False?
+
+Answer Options:
+  A. z
+  B. w
+  C. x
+  D. y
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 114
+------------------------------------------------------------------------------------------
+Question Text:
+You are an intern for ABC electric cars company. You must create a function that calculates the average
+velocity of their vehicles on a 1320 foot (1/4 mile) track. Consider the following code.
+
+The output must be as precise as possible. What would you insert instead of ??? and ??? ?
+
+Answer Options:
+  A. 1 | int
+  C. 1 | int
+  D. 1 | float
+
+Correct Answer: B
+
+Explanation:  "The output must be as precise as possible" tells you that you need a float to provide a decimal to achieve precision.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 115
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code if the user enters 3 and 2?
+
+Answer Options:
+  A. 1
+  B. 2
+  C. 3
+  D. 0
+
+Correct Answer: D
+
+Explanation:  x = int(input()) # x = 3 y = int(input()) # y = 2 x=x%y#x=3%2=1 x=x%y#x=1%2=1 y=y%x#y=2%1=0 print(y) # Output: 0
+
+------------------------------------------------------------------------------------------
+
+QUESTION 116
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+A. 1 | False
+2 | False
+3 | True
+4 | False
+5 | True
+
+Answer Options:
+  B. 1 | True
+  C. 1 | True
+  D. 1 | True
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 117
+------------------------------------------------------------------------------------------
+Question Text:
+You want the name, the user puts in to be written back to the monitor. What snippet would you insert in the line
+indicated below:
+
+Answer Options:
+  A. input(name)
+  B. name = input
+  C. name = input()
+  D. input('name')
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 118
+------------------------------------------------------------------------------------------
+Question Text:
+The ABC company is building a basketball court for its employees to improve company morale. You are
+creating a Python program that employees can use to keep track of their average score. The program must
+allow users to enter their name and current scores. The program will output the user name and the user's
+average score. The output must meet the following requirements:
+• The user name must be left-aligned.
+• If the user name has fewer than 20 characters, additional space must be added to the right.
+• The average score must have three places to the left of the decimal point and one place to the right of the
+decimal (xxx.x).
+What would you insert instead of ??? and ??? ?
+
+Answer Options:
+  A. 1 | %-20f
+  B. 1 | %-20i
+  C. 1 | %-20s
+  D. 1 | %-20f
+
+Correct Answer: C
+
+Explanation:  >> Format: %-20s '%' starts the format specifier '-' left-aligns the text '20' reserves 20 character spaces 's' formats as a string >> Format: %4.1f '4' is the minimum width '.1' controls the decimal places 'f' formats as a float
+
+------------------------------------------------------------------------------------------
+
+QUESTION 119
+------------------------------------------------------------------------------------------
+Question Text:
+Consider the following python code:
+
+What are the data types of the variables z1, z2 and z3?
+
+Answer Options:
+  A. str, str, str
+  B. str, float, float
+  C. str, int, int
+  D. str, int, float
+
+Correct Answer: B
+
+------------------------------------------------------------------------------------------
+
+QUESTION 120
+------------------------------------------------------------------------------------------
+Question Text:
+The following code reads two numbers.
+Which of the following is the correct input for the code?
+
+Answer Options:
+  A. 3, 4
+  B. 3 4
+  D. <pre>3 4</pre>
+
+Correct Answer: A
+
+Explanation:  eval() evaluates the input string as Python code, then it tries to unpack the result into two variables, x and y. So the input must be something eval() can interpret as a tuple or expression that gives two values. This is a tuple of two numbers → eval('3, 4') becomes (3, 4) Then it unpacks to x = 3
+
+------------------------------------------------------------------------------------------
+
+QUESTION 121
+------------------------------------------------------------------------------------------
+Question Text:
+You want to print the sum of two number.
+What snippet would you insert in the line indicated below:
+
+Answer Options:
+  A. print('The Result is ' + (int(x) + int(y)))
+  B. print('The Result is ' + (int(x + y)))
+  C. print('The Result is ' + str(int(x + y)))
+  D. print('The Result is ' + str(int(x) + int(y)))
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 122
+------------------------------------------------------------------------------------------
+Question Text:
+Consider the following Python code:
+
+What are the types of the variables name, age and flag?
+
+Answer Options:
+  A. float, bool, str
+  B. str, int, bool
+  C. int, bool, char
+  D. str, int, int
+
+Correct Answer: B
+
+------------------------------------------------------------------------------------------
+
+QUESTION 123
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following is the output of the below Python code?
+
+A. Hello World
+
+Answer Options:
+  B. dlroW olleH
+  C. World
+  D. Hello
+
+Correct Answer: B
+
+------------------------------------------------------------------------------------------
+
+QUESTION 124
+------------------------------------------------------------------------------------------
+Question Text:
+Take a look at the snippet, and choose the true statements: (Choose two.)
+
+Answer Options:
+  A. nums is longer than vals
+  B. nums and vals are of the same length
+  C. vals is longer than nums
+  D. nums and vals refer to the same list
+
+Correct Answer: BD
+
+Explanation:  nums = [1, 2, 3] Creates a list nums with three elements: [1, 2, 3]. vals = nums The variable vals is assigned the same reference as nums. Now both vals and nums point to the same list object in memory. del vals[1:2] The slice vals[1:2] selects the element at index 1 (value 2). The del statement re
+
+------------------------------------------------------------------------------------------
+
+QUESTION 125
+------------------------------------------------------------------------------------------
+Question Text:
+What is the result of the following code?
+
+Answer Options:
+  A. 2
+  B. The program will cause an error.
+  C. 1
+  D. 3
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 126
+------------------------------------------------------------------------------------------
+Question Text:
+Consider the following code.
+
+Which of the inputs below would produce the specified output?
+
+Answer Options:
+  A. None of the above.
+  C. Both are correct.
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 127
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+A. 2
+
+Answer Options:
+  B. 4
+  C. 3
+  D. 5
+
+Correct Answer: A
+
+------------------------------------------------------------------------------------------
+
+QUESTION 128
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 6
+  B. The code is erroneous.
+  C. 9
+  D. 3
+
+Correct Answer: D
+
+Explanation:  data = [1, 2, [3, 4], [5, 6], 7, [8, 9]] You are looping through the list data and counting how many elements are lists. The list has 6 elements: 1, 2, 7 count as 3 elements, while [3, 4], [5, 6], [8, 9] count as an additional 3 count only increases if an element is a list 1, 2, 7 are not lists
+
+------------------------------------------------------------------------------------------
+
+QUESTION 129
+------------------------------------------------------------------------------------------
+Question Text:
+Consider the following code.
+
+What would you insert instead of ???, so that the program prints the following pattern to the monitor?
+
+A. -1
+
+Answer Options:
+  B. n
+  C. str(n)
+  D. 1
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 130
+------------------------------------------------------------------------------------------
+Question Text:
+You are creating a Python script to evaluate input and check for upper and lower case.
+Code segment 1:
+
+Code segment 2:
+
+Code segment 3:
+
+Code segment 4:
+
+Code segment 5:
+
+Code segment 6:
+
+Which four code segments should you use to develop the solution?
+
+Answer Options:
+  A. Code segment 3 Code segment 6 Code segment 5 -
+  B. Code segment 1 Code segment 3 Code segment 5 Code segment 6
+  C. Code segment 3 Code segment 6 Code segment 5 Code segment 4
+  D. Code segment 3 Code segment 6 Code segment 5 Code segment 1
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 131
+------------------------------------------------------------------------------------------
+Question Text:
+Consider the following code.
+
+Why is it not working?
+
+Answer Options:
+  A. Misnamed variable(s)
+  B. Mismatched data type(s)
+  C. Invalid Syntax
+  D. None of the above.
+
+Correct Answer: B
+
+------------------------------------------------------------------------------------------
+
+QUESTION 132
+------------------------------------------------------------------------------------------
+Question Text:
+The ABC company is creating a program that allows customers to log the number of miles biked. The program
+will send messages based on how many miles the customer logs. You create the following Python code.
+
+What would you insert instead of ??? and ??? ? (Choose two.)
+
+Answer Options:
+  A. def calc_calories(miles, calories_per_mile):
+  B. def calc_calories():
+  C. def calc_calories(miles, burn_rate):
+  D. def get_name(biker):
+
+Correct Answer: A
+
+------------------------------------------------------------------------------------------
+
+QUESTION 133
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 8
+  B. 2
+  C. 4
+  D. 6
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 134
+------------------------------------------------------------------------------------------
+Question Text:
+Analyze the following code fragments that assign a boolean value to the variable even?
+
+Answer Options:
+  A. All three are correct, but Code-2 is preferred.
+  B. All three are correct, but Code-3 is preferred.
+  C. Code-3 has a syntax error because you attempt to assign a number to even.
+  D. All three are correct, but Code-1 is preferred.
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 135
+------------------------------------------------------------------------------------------
+Question Text:
+How many stars will the following code send to the monitor?
+
+Answer Options:
+  A. one
+  B. two
+  C. three
+  D. zero
+
+Correct Answer: C
+
+Explanation:  x starts at 0. The loop runs while x < 6. x is incremented by 1 on each loop. If x is even (x % 2 == 0), it hits continue, which skips the print('*')
+
+------------------------------------------------------------------------------------------
+
+QUESTION 136
+------------------------------------------------------------------------------------------
+Question Text:
+Consider the following code.
+
+You want to print the numbers 1 to 7 to the monitor. But the code does not work. What do you have to change?
+(Choose two.)
+
+Answer Options:
+  A. x = x + 1 # Line 8
+  B. while (x < 10): # Line 3
+  C. print(nums[x]) # Line 4
+  D. if nums[x] == 7: # Line 5
+
+Correct Answer: CD
+
+------------------------------------------------------------------------------------------
+
+QUESTION 137
+------------------------------------------------------------------------------------------
+Question Text:
+Consider the following code.
+
+What would you insert instead of ???, so that the program prints the following pattern to the monitor?
+
+Answer Options:
+  A. None
+  B. 1
+  C. 0
+  D. 1
+
+Correct Answer: B
+
+------------------------------------------------------------------------------------------
+
+QUESTION 138
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following sentences correctly describes the output of the below Python code?
+
+Answer Options:
+  A. None of the above.
+  B. res is the sum of all the number in the list.
+  C. res is the smallest number in the list.
+  D. res is the largest number in the list.
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 139
+------------------------------------------------------------------------------------------
+Question Text:
+How many stars will the following code print to the monitor?
+
+Answer Options:
+  A. two
+  B. one
+  C. four
+  D. eight
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 140
+------------------------------------------------------------------------------------------
+Question Text:
+How much will the delivery cost be, if the order value is 1700 and the state is FL (Florida)?
+
+A. 120
+
+Answer Options:
+  B. 105
+  C. 80
+  D. 90
+
+Correct Answer: A
+
+Explanation:  order = int(input('Please enter the order value: ')) state = input('Please enter the state (as postal abbreviation): ') delivery = 0 if state in ['NC', 'SC', 'VA']: if order <= 1000: delivery = 70 elif 1000 < order < 2000: delivery = 80 else: delivery = 90 else: delivery = 50 if state in ['GA', 'WV
+
+------------------------------------------------------------------------------------------
+
+QUESTION 141
+------------------------------------------------------------------------------------------
+Question Text:
+How many stars will the following code print to the monitor?
+
+Answer Options:
+  A. two
+  B. one
+  C. The snippet will enter an infinite loop.
+  D. zero
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 142
+------------------------------------------------------------------------------------------
+Question Text:
+What will happen when you attempt to run the following code?
+
+Answer Options:
+  A. The program will not run due to syntax error.
+  B. The program will run and cause an error.
+  C. The program will fall into infinite loop, printing 1 on each line.
+  D. The program will print 1 on one line only.
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 143
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 1 | Hello
+  C. 1 | Hello
+  D. An infinite loop.
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 144
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 3
+  B. 4
+  C. 1
+  D. 2
+
+Correct Answer: A
+
+------------------------------------------------------------------------------------------
+
+QUESTION 145
+------------------------------------------------------------------------------------------
+Question Text:
+How many stars will the following snippet print to the monitor?
+
+A. The snippet will enter an infinite loop.
+
+Answer Options:
+  B. 2
+  C. 0
+  D. 1
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 146
+------------------------------------------------------------------------------------------
+Question Text:
+What happens when the user runs the following code?
+
+Answer Options:
+  A. The program enters an infinite loop.
+  B. The program outputs one asterisk ( * ) to the screen.
+  C. The program outputs five asterisks ( ***** ) to the screen.
+  D. The program outputs three asterisks ( *** ) to the screen.
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 147
+------------------------------------------------------------------------------------------
+Question Text:
+How many hashes ( # ) does the code output to the screen?
+
+Answer Options:
+  A. three
+  B. zero (the code outputs nothing)
+  C. five
+  D. one
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 148
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. aoo
+  B. The code is erroneous and cannot be run.
+  C. …
+  D. canistrellivol
+
+Correct Answer: A
+
+------------------------------------------------------------------------------------------
+
+QUESTION 149
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 1
+  B. 3
+  C. 4
+  D. The code outputs nothing.
+
+Correct Answer: A
+
+------------------------------------------------------------------------------------------
+
+QUESTION 150
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected result of running the following code?
+
+Answer Options:
+  A. The code prints 2
+  B. The code prints 1
+  C. The code prints 0
+  D. The code raises an unhandled exception.
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 151
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+A. 293
+
+Answer Options:
+  B. yh
+  C. The code is erroneous and cannot be run.
+  D. 12.849.923.2
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 152
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected result of the following code?
+
+Answer Options:
+  A. 1
+  B. 2
+  C. 5
+  D. The code will cause an unhandled exception
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 153
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+
+Answer Options:
+  A. 1
+  B. 3
+  C. 4
+  D. The code outputs nothing.
+
+Correct Answer: 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 154
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+print(3 * 'abc' + 'xyz')
+
+Answer Options:
+  A. 3abcxyz
+  B. abcabcxyzxyz
+  C. abcabcabcxyz
+  D. abcxyzabcxyzabcxyz
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 155
+------------------------------------------------------------------------------------------
+Question Text:
+Consider the following code.
+x = float('23.42')
+Which of the following expressions will evaluate to 2?
+
+Answer Options:
+  A. int(x) + False
+  B. bool(x) + True
+  C. str(x)
+  D. bool(x)
+
+Correct Answer: B
+
+Explanation:  bool(x) converts x (which is 23.42) to a boolean. Since x is a non-zero value, it becomes True. True is treated as 1 in numerical operations. True + True is 1 + 1, which evaluates to 2.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 156
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following statements can be used to return the length of the given string str?
+
+Answer Options:
+  A. str.size()
+  B. str._len_()
+  C. size(str)
+  D. len(str)
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 157
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+print(float('1.3'))
+
+A. The code is erroneous.
+
+Answer Options:
+  B. 1,3
+  C. 13
+  D. 1.3
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 158
+------------------------------------------------------------------------------------------
+Question Text:
+What is the decimal value of the following binary number?
+
+Answer Options:
+  A. 8
+  B. 4
+  C. 12
+  D. 10
+
+Correct Answer: D
+
+Explanation:  1010 = 10 First 1 (left) is in the 8 bit location Second 1 is in the 2 bit location 0 bits are turned off and not counted 8 + 2 = 10 Bit values from right to left are 1, 2, 4, 8
+
+------------------------------------------------------------------------------------------
+
+QUESTION 159
+------------------------------------------------------------------------------------------
+Question Text:
+The most important difference between integer and floating-point numbers lies in the fact that:
+
+Answer Options:
+  A. they are stored differently in the computer memory
+  B. they cannot be used simultaneously
+  C. integers cannot be literals, while floats can
+
+Correct Answer: A
+
+------------------------------------------------------------------------------------------
+
+QUESTION 160
+------------------------------------------------------------------------------------------
+Question Text:
+You want to print each name of the list on a new line.
+data = ['Peter', 'Paul', 'Mary', 'Jane']
+Which statement will you use?
+
+Answer Options:
+  A. print(data.concatenate('\n'))
+  B. print('\n'.join(data))
+  C. print(data.join('\n'))
+  D. print(data.join('%s\n', names))
+
+Correct Answer: B
+
+------------------------------------------------------------------------------------------
+
+QUESTION 161
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+print(ord('c') – ord('a'))
+
+Answer Options:
+  A. 1
+  B. 2
+  C. 3
+  D. 0
+
+Correct Answer: B
+
+Explanation:  ord('a'): The Unicode code point for the character 'a' is 97. ord('c'): The Unicode code point for the character 'c' is 99. ord('c') - ord('a') = 99 - 97 = 2
+
+------------------------------------------------------------------------------------------
+
+QUESTION 162
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+print('x', 'y', 'z', sep='sep')
+
+Answer Options:
+  A. x y z
+  B. xyz
+  C. xsepysepzsep
+  D. xsepysepz
+
+Correct Answer: D
+
+Explanation:  'x', 'y', and 'z' are the values to print. sep: what to put between each object (default is a space ' ') sep='sep' means the string 'sep' will be used between them.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 163
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+print(type(1J))
+
+Answer Options:
+  A. <type 'dict'>
+  B. <type 'unicode'>
+  C. <type 'float'>
+  D. <type 'complex'>
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 164
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following operators can be used with strings?
+
+1) +
+2) *
+3) 4) in
+
+Answer Options:
+  A. 1, 2, 3
+  B. 1, 2, 4
+  C. 1, 2, 3, 4
+  D. 1, 2
+
+Correct Answer: B
+
+------------------------------------------------------------------------------------------
+
+QUESTION 165
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following statements is false?
+
+Answer Options:
+  A. The None value can be compared with variables.
+  B. The None value can not be used as an argument of arithmetic operators.
+  C. The None value may not be used outside functions.
+  D. The None value can be assigned to variables.
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 166
+------------------------------------------------------------------------------------------
+Question Text:
+The value thirty point eleven times ten raised to the power of nine should be written as:
+
+Answer Options:
+  A. 30.11E9.0
+  B. 30E11.9
+  C. 30.11*10^9
+  D. 30.11E9
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 167
+------------------------------------------------------------------------------------------
+Question Text:
+If you want to build a string that reads:
+Peter's sister's name's "Anna"
+Which of the following literals would you use? (Choose two.)
+
+Answer Options:
+  A. 'Peter's sister's name's "Anna"'
+  B. 'Peter\'s sister\'s name\'s \"Anna\"'
+  C. "Peter's sister's name's "Anna""
+  D. "Peter's sister's name's \"Anna\""
+
+Correct Answer: BD
+
+------------------------------------------------------------------------------------------
+
+QUESTION 168
+------------------------------------------------------------------------------------------
+Question Text:
+You want to write a program that asks the user for a value. For the rest of the program you need a whole
+number, even if the user enters a decimal value.
+What would you have to write?
+
+Answer Options:
+  A. num = str(input('How many do you need?'))
+  B. num = int(float(input('How many do you need?')))
+  C. num = float(input('How many do you need?'))
+  D. num = int('How many do you need?')
+
+Correct Answer: B
+
+Explanation:  The input() function gets the user's input as a string. float() converts that string into a floating-point number (allowing for decimal input). int() then converts the float to an integer, effectively discarding the decimal part.
+
+------------------------------------------------------------------------------------------
+
+QUESTION 169
+------------------------------------------------------------------------------------------
+Question Text:
+The 0o prefix means that the number after it is denoted as:
+
+Answer Options:
+  A. decimal
+  B. binary
+  C. hexadecimal
+  D. octal
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 170
+------------------------------------------------------------------------------------------
+Question Text:
+How many arguments can the print() function take?
+
+Answer Options:
+  A. Any number of arguments (excluding zero).
+  B. Not more than seven arguments.
+  C. Any number of arguments (including zero).
+  D. Just one argument.
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 171
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following statements are true? (Choose two.)
+
+Answer Options:
+  A. The None value can be assigned to variables
+  B. The None value can be used as an argument of arithmetic operators
+  D. The None value cannot be used outside functions
+
+Correct Answer: AC
+
+------------------------------------------------------------------------------------------
+
+QUESTION 172
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+print(chr(ord('z') - 2))
+
+Answer Options:
+  A. x
+  B. y
+  C. a
+  D. z
+
+Correct Answer: A
+
+------------------------------------------------------------------------------------------
+
+QUESTION 173
+------------------------------------------------------------------------------------------
+Question Text:
+How many elements will the following list contain?
+data = [i for i in range(-1, 2)]
+
+Answer Options:
+  A. one
+  B. two
+  C. zero
+  D. four
+
+Correct Answer: 
+
+------------------------------------------------------------------------------------------
+
+QUESTION 174
+------------------------------------------------------------------------------------------
+Question Text:
+How many stars will the following snippet print to the monitor? x = 16 while x > 0: print('*') x //= 2
+
+Answer Options:
+  A. one
+  B. three
+  C. The code will enter an infinite loop.
+  D. five
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 175
+------------------------------------------------------------------------------------------
+Question Text:
+What is the expected output of the following code?
+print(len([i for i in range(0, -2)]))
+
+Answer Options:
+  A. 1
+  B. 3
+  C. 2
+  D. 0
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 176
+------------------------------------------------------------------------------------------
+Question Text:
+Assuming that the following assignment has been successfully executed:
+my_list = [1, 2, 4, 8]
+Select the expressions which will not raise any exception. (Choose two.)
+
+Answer Options:
+  A. my_list.[4]
+  B. my_list[my_list[3]]
+  C. my_list[-2]
+  D. my_list[-3:-2]
+
+Correct Answer: CD
+
+------------------------------------------------------------------------------------------
+
+QUESTION 177
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following snippets correctly define a function which returns its only argument doubled? (Choose
+two.)
+
+Answer Options:
+  A. def double(value):
+  B. def 2_times_arg(in):
+  C. def multiply_by_2:
+  D. def times_2(x):
+
+Correct Answer: AD
+
+------------------------------------------------------------------------------------------
+
+QUESTION 178
+------------------------------------------------------------------------------------------
+Question Text:
+A program written in a high-level programming language is called:
+
+Answer Options:
+  A. a source code
+  B. machine code
+  D. the ASCII code
+
+Correct Answer: D
+
+------------------------------------------------------------------------------------------
+
+QUESTION 179
+------------------------------------------------------------------------------------------
+Question Text:
+What is true about exceptions and debugging? (Choose two.)
+
+Answer Options:
+  A. A tool that allows you to precisely trace program execution is called a debugger.
+  B. One try-except block may contain more than one except branch.
+  C. The default (anonymous) except branch cannot be the last branch in the try-except block.
+  D. If some Python code is executed without errors, this proves that there are no errors in it.
+
+Correct Answer: AB
+
+------------------------------------------------------------------------------------------
+
+QUESTION 180
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following functions can be invoked with one argument?
+
+Answer Options:
+  A. def theta(None):
+  B. def eta(level, size, depth = 0):
+  C. def epsilon(level=100):
+  D. def zeta():
+
+Correct Answer: C
+
+------------------------------------------------------------------------------------------
+
+QUESTION 181
+------------------------------------------------------------------------------------------
+Question Text:
+Assuming that the following assignment has been successfully executed:
+the_list = [True, 3.1415, -1]
+Which of the following expressions evaluate to True ? (Choose two.)
+
+Answer Options:
+  A. len(sorted(the_list)) != len(the_list)
+  B. “True” in the_list
+  C. the list.index) == 2
+  D. (len(the_list) – 3) in the_list
+
+Correct Answer: BC
+
+------------------------------------------------------------------------------------------
+
+QUESTION 182
+------------------------------------------------------------------------------------------
+Question Text:
+Which of the following expressions evaluate to zero? (Choose two.)
+
+Answer Options:
+  A. 2 / –3 * 6 + 4
+  B. –3 / 2 * 4 + 1
+  C. 3 ** 2 // 3 / 3 – 1
+  D. 2 // 2 * 2 + 3
+
+Correct Answer: AC
+
+------------------------------------------------------------------------------------------
+
+QUESTION 183
+------------------------------------------------------------------------------------------
+Question Text:
+Assuming that the following assignment has been successfully executed:
+the_list = ['list', False, 3e8]
+Which of the following expressions evaluate to True ? (Choose two.)
+
+Answer Options:
+  A. int(the_list[2]) == len(the_list)
+  B. the_list[1] in the list
+  C. 300 in the_list and the_list[l]
+  D. the_list.index(False) == 1
+
+Correct Answer: BD
+
+------------------------------------------------------------------------------------------
+
