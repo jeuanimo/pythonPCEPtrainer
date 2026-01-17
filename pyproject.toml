@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pythonPCEPtrainer"
+version = "0.1.0"
+description = "Terminal-based PCEP exam tutor"
+authors = [{name = "jeuanimo"}]
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "C", "I"]
+
+[tool.isort]
+profile = "black"
