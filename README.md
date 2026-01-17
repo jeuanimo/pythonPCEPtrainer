@@ -1,8 +1,17 @@
 # pythonPCEPtrainer
 
-PCEP Python Exam Tutor — an interactive terminal-based study tool for PCEP (Python Certified Entry-Level Programmer).
+PCEP Python Exam Tutor — an interactive study tool for PCEP (Python Certified Entry-Level Programmer) with both terminal and GUI versions.
 
-Quick start
+## Features
+
+- 15 comprehensive lessons covering all PCEP exam topics
+- Interactive quizzes with instant feedback
+- Hands-on coding exercises
+- 20-question practice exams
+- Progress tracking and statistics
+- Both terminal (CLI) and graphical (GUI) interfaces
+
+## Quick Start
 
 1. Create and activate a virtual environment:
 
@@ -13,15 +22,57 @@ source .venv/bin/activate
 
 2. Run the tutor:
 
+**Terminal Version:**
 ```bash
 python3 python_tutor.py
 ```
 
-Notes
+**GUI Version:**
+```bash
+python3 python_tutor_gui.py
+```
 
-- Progress is saved to `pcep_tutor_progress.json`. Add this file to `.gitignore` if you don't want to track it.
-- This repository contains a basic GitHub Actions workflow that performs a syntax check with `python -m py_compile`.
+## Usage
 
-License
+### Terminal Version
+- Navigate with keyboard commands
+- Complete lessons, exercises, and quizzes
+- Take practice exams
+- View study tips
 
-MIT — see LICENSE (not included).
+### GUI Version
+- Double-click lessons to open them
+- Use tabs to navigate content, examples, exercises, and quizzes
+- Click buttons to run code and check answers
+- Access practice exams and study tips from the menu
+
+## Development
+
+Install development dependencies:
+
+```bash
+pip install -r requirements-dev.txt
+```
+
+Run tests:
+
+```bash
+pytest
+```
+
+Run linters:
+
+```bash
+ruff check .
+black --check .
+```
+
+## Notes
+
+- Progress is saved to `pcep_tutor_progress.json`
+- Both versions share the same progress file
+- GitHub Actions CI runs linters and tests on every push
+
+## License
+
+MIT — see [LICENSE](LICENSE)
