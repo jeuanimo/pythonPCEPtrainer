@@ -4,10 +4,10 @@ PCEP Python Exam Tutor - Interactive Certification Preparation
 Comprehensive coverage of all PCEP exam topics with practice questions!
 """
 
-import sys
 import json
 import os
 import random
+import sys
 
 
 class PythonTutor:
@@ -24,7 +24,7 @@ class PythonTutor:
         self.completed_lessons = set()
         self.quiz_scores = {}
         self.load_progress()
-        
+
         self.lessons = [
             # SECTION 1: Introduction to Python and Computer Programming
             {
@@ -80,28 +80,43 @@ print(var)
                 "exercise": {
                     "description": "Create a variable 'python_version' and assign it the value 3. Then reassign it to 'PCEP'",
                     "hint": "python_version = 3, then python_version = 'PCEP'",
-                    "check": lambda code: "python_version" in code and "=" in code
+                    "check": lambda code: "python_version" in code and "=" in code,
                 },
                 "quiz": [
                     {
                         "question": "Python is primarily a(n) _____ language.",
-                        "options": ["A) Compiled", "B) Interpreted", "C) Assembly", "D) Machine"],
+                        "options": [
+                            "A) Compiled",
+                            "B) Interpreted",
+                            "C) Assembly",
+                            "D) Machine",
+                        ],
                         "answer": "B",
-                        "explanation": "Python is an interpreted language. Code is executed by an interpreter."
+                        "explanation": "Python is an interpreted language. Code is executed by an interpreter.",
                     },
                     {
                         "question": "What is stored in __pycache__ directory?",
-                        "options": ["A) Source code", "B) Documentation", "C) Bytecode files (.pyc)", "D) Log files"],
+                        "options": [
+                            "A) Source code",
+                            "B) Documentation",
+                            "C) Bytecode files (.pyc)",
+                            "D) Log files",
+                        ],
                         "answer": "C",
-                        "explanation": "Python compiles source code to bytecode (.pyc) files stored in __pycache__."
+                        "explanation": "Python compiles source code to bytecode (.pyc) files stored in __pycache__.",
                     },
                     {
                         "question": "Is Python case-sensitive?",
-                        "options": [PythonTutor.OPTION_A_YES, PythonTutor.OPTION_B_NO, "C) Only for variables", "D) Only for functions"],
+                        "options": [
+                            PythonTutor.OPTION_A_YES,
+                            PythonTutor.OPTION_B_NO,
+                            "C) Only for variables",
+                            "D) Only for functions",
+                        ],
                         "answer": "A",
-                        "explanation": "Python is case-sensitive. 'Variable' and 'variable' are different identifiers."
-                    }
-                ]
+                        "explanation": "Python is case-sensitive. 'Variable' and 'variable' are different identifiers.",
+                    },
+                ],
             },
             # SECTION 2: Data Types, Variables, Basic I/O, Operators
             {
@@ -162,28 +177,28 @@ print(type(True))    # <class 'bool'>
                 "exercise": {
                     "description": "Create an integer, float, and boolean variable. Use scientific notation for the float (e.g., 2e3)",
                     "hint": "num = 10, sci = 2e3, flag = True",
-                    "check": lambda code: "=" in code and "e" in code.lower()
+                    "check": lambda code: "=" in code and "e" in code.lower(),
                 },
                 "quiz": [
                     {
                         "question": "What is the value of 0o12 in decimal?",
                         "options": ["A) 12", "B) 10", "C) 8", "D) 14"],
                         "answer": "B",
-                        "explanation": "0o12 is octal. 1×8 + 2 = 10 in decimal."
+                        "explanation": "0o12 is octal. 1×8 + 2 = 10 in decimal.",
                     },
                     {
                         "question": "Which is a valid float literal?",
                         "options": ["A) 4.", "B) 4,0", "C) 4f", "D) 4_f"],
                         "answer": "A",
-                        "explanation": "4. is valid (equals 4.0). Python uses dots, not commas for decimals."
+                        "explanation": "4. is valid (equals 4.0). Python uses dots, not commas for decimals.",
                     },
                     {
                         "question": "What does 2e3 equal?",
                         "options": ["A) 6", "B) 8", "C) 2000", "D) 23"],
                         "answer": "C",
-                        "explanation": "2e3 means 2 × 10^3 = 2000"
-                    }
-                ]
+                        "explanation": "2e3 means 2 × 10^3 = 2000",
+                    },
+                ],
             },
             {
                 "title": "Operators & Expressions",
@@ -248,28 +263,33 @@ print(str(100))      # "100"
                 "exercise": {
                     "description": "Calculate: 10 // 3 and 10 % 3. Store results in variables 'quotient' and 'remainder'",
                     "hint": "quotient = 10 // 3, remainder = 10 % 3",
-                    "check": lambda code: "//" in code and "%" in code
+                    "check": lambda code: "//" in code and "%" in code,
                 },
                 "quiz": [
                     {
                         "question": "What is 2 ** 3 ** 2?",
                         "options": ["A) 64", "B) 512", "C) 256", "D) 128"],
                         "answer": "B",
-                        "explanation": "** is right associative: 2**(3**2) = 2**9 = 512"
+                        "explanation": "** is right associative: 2**(3**2) = 2**9 = 512",
                     },
                     {
                         "question": "What is -11 // 2?",
                         "options": ["A) -5", "B) -5.5", "C) -6", "D) -4"],
                         "answer": "C",
-                        "explanation": "Floor division floors toward negative infinity: -11 // 2 = -6"
+                        "explanation": "Floor division floors toward negative infinity: -11 // 2 = -6",
                     },
                     {
                         "question": "What does x *= 3 mean?",
-                        "options": ["A) x = 3", "B) x = x * 3", "C) x = x + 3", "D) x = 3 * x"],
+                        "options": [
+                            "A) x = 3",
+                            "B) x = x * 3",
+                            "C) x = x + 3",
+                            "D) x = 3 * x",
+                        ],
                         "answer": "B",
-                        "explanation": "x *= 3 is shorthand for x = x * 3"
-                    }
-                ]
+                        "explanation": "x *= 3 is shorthand for x = x * 3",
+                    },
+                ],
             },
             {
                 "title": "Strings & Basic I/O",
@@ -342,28 +362,38 @@ print("World")                     # Hello World (no newline between)
                 "exercise": {
                     "description": "Create a string 'pcep' and print it reversed and in uppercase",
                     "hint": "s = 'pcep', print(s[::-1].upper())",
-                    "check": lambda code: "[::-1]" in code or ".upper()" in code.lower()
+                    "check": lambda code: "[::-1]" in code or ".upper()" in code.lower(),
                 },
                 "quiz": [
                     {
                         "question": "What does 'Hi' * 3 produce?",
-                        "options": ["A) HiHiHi", "B) Hi Hi Hi", "C) Hi3", PythonTutor.OPTION_D_ERROR],
+                        "options": [
+                            "A) HiHiHi",
+                            "B) Hi Hi Hi",
+                            "C) Hi3",
+                            PythonTutor.OPTION_D_ERROR,
+                        ],
                         "answer": "A",
-                        "explanation": "String * number repeats the string that many times with no spaces."
+                        "explanation": "String * number repeats the string that many times with no spaces.",
                     },
                     {
                         "question": "What does input() return?",
-                        "options": ["A) Integer", "B) Float", "C) String", "D) Depends on input"],
+                        "options": [
+                            "A) Integer",
+                            "B) Float",
+                            "C) String",
+                            "D) Depends on input",
+                        ],
                         "answer": "C",
-                        "explanation": "input() always returns a string, even if user enters numbers."
+                        "explanation": "input() always returns a string, even if user enters numbers.",
                     },
                     {
                         "question": "What is 'Python'[-1]?",
                         "options": ["A) P", "B) n", "C) o", PythonTutor.OPTION_D_ERROR],
                         "answer": "B",
-                        "explanation": "Negative indices count from the end. -1 is the last character: 'n'"
-                    }
-                ]
+                        "explanation": "Negative indices count from the end. -1 is the last character: 'n'",
+                    },
+                ],
             },
             # SECTION 3: Boolean, Control Flow, Lists, Logic
             {
@@ -435,28 +465,28 @@ print(1 < x < 10)  # True (equivalent to: 1 < x and x < 10)
                 "exercise": {
                     "description": "Create a boolean expression checking if a number is between 10 and 20 (inclusive)",
                     "hint": "result = 10 <= num <= 20",
-                    "check": lambda code: "<=" in code and ("and" in code.lower() or code.count("<=") >= 2)
+                    "check": lambda code: "<=" in code and ("and" in code.lower() or code.count("<=") >= 2),
                 },
                 "quiz": [
                     {
                         "question": "What is the result of: True or True and False?",
                         "options": ["A) True", "B) False", "C) Error", "D) None"],
                         "answer": "A",
-                        "explanation": "'and' has higher priority than 'or': True or (True and False) = True or False = True"
+                        "explanation": "'and' has higher priority than 'or': True or (True and False) = True or False = True",
                     },
                     {
                         "question": "Which is falsy in Python?",
                         "options": ["A) []", "B) 'False'", "C) 1", "D) [0]"],
                         "answer": "A",
-                        "explanation": "Empty list [] is falsy. String 'False' is truthy (non-empty string)."
+                        "explanation": "Empty list [] is falsy. String 'False' is truthy (non-empty string).",
                     },
                     {
                         "question": "What does 5 == 5.0 return?",
                         "options": ["A) True", "B) False", "C) Error", "D) 1"],
                         "answer": "A",
-                        "explanation": "== compares values, not types. 5 and 5.0 have equal values."
-                    }
-                ]
+                        "explanation": "== compares values, not types. 5 and 5.0 have equal values.",
+                    },
+                ],
             },
             {
                 "title": "Conditional Statements (if/elif/else)",
@@ -531,28 +561,38 @@ if "apple" in fruits:
                 "exercise": {
                     "description": "Write an if-elif-else chain that categorizes a number as positive, negative, or zero",
                     "hint": "if num > 0: ... elif num < 0: ... else: ...",
-                    "check": lambda code: 'if' in code.lower() and 'elif' in code.lower() and 'else' in code.lower()
+                    "check": lambda code: "if" in code.lower() and "elif" in code.lower() and "else" in code.lower(),
                 },
                 "quiz": [
                     {
                         "question": "What comes after 'if condition'?",
-                        "options": ["A) Colon :", "B) Semicolon ;", "C) Brace {", "D) Nothing"],
+                        "options": [
+                            "A) Colon :",
+                            "B) Semicolon ;",
+                            "C) Brace {",
+                            "D) Nothing",
+                        ],
                         "answer": "A",
-                        "explanation": "In Python, if statements must end with a colon :"
+                        "explanation": "In Python, if statements must end with a colon :",
                     },
                     {
                         "question": "What is 10 if 5 > 3 else 20?",
-                        "options": ["A) 10", "B) 20", "C) True", PythonTutor.OPTION_D_ERROR],
+                        "options": [
+                            "A) 10",
+                            "B) 20",
+                            "C) True",
+                            PythonTutor.OPTION_D_ERROR,
+                        ],
                         "answer": "A",
-                        "explanation": "Since 5 > 3 is True, it returns 10"
+                        "explanation": "Since 5 > 3 is True, it returns 10",
                     },
                     {
                         "question": "Which keyword is used for additional conditions?",
                         "options": ["A) elseif", "B) else if", "C) elif", "D) elsif"],
                         "answer": "C",
-                        "explanation": "Python uses 'elif' (not 'elseif' or 'else if')"
-                    }
-                ]
+                        "explanation": "Python uses 'elif' (not 'elseif' or 'else if')",
+                    },
+                ],
             },
             {
                 "title": "Loops: while and for",
@@ -644,28 +684,43 @@ for i in range(3):
                 "exercise": {
                     "description": "Write a for loop that prints even numbers from 0 to 10 using range",
                     "hint": "for i in range(0, 11, 2): print(i)",
-                    "check": lambda code: 'for' in code.lower() and 'range' in code.lower()
+                    "check": lambda code: "for" in code.lower() and "range" in code.lower(),
                 },
                 "quiz": [
                     {
                         "question": "What does range(5) produce?",
-                        "options": ["A) 1,2,3,4,5", "B) 0,1,2,3,4", "C) 0,1,2,3,4,5", "D) 1,2,3,4"],
+                        "options": [
+                            "A) 1,2,3,4,5",
+                            "B) 0,1,2,3,4",
+                            "C) 0,1,2,3,4,5",
+                            "D) 1,2,3,4",
+                        ],
                         "answer": "B",
-                        "explanation": "range(5) generates numbers from 0 to 4 (5 is excluded)"
+                        "explanation": "range(5) generates numbers from 0 to 4 (5 is excluded)",
                     },
                     {
                         "question": "What does 'continue' do?",
-                        "options": ["A) Exit loop", "B) Skip to next iteration", "C) Restart loop", "D) Pause loop"],
+                        "options": [
+                            "A) Exit loop",
+                            "B) Skip to next iteration",
+                            "C) Restart loop",
+                            "D) Pause loop",
+                        ],
                         "answer": "B",
-                        "explanation": "'continue' skips the rest of the current iteration and goes to the next one"
+                        "explanation": "'continue' skips the rest of the current iteration and goes to the next one",
                     },
                     {
                         "question": "When does the 'else' clause of a loop execute?",
-                        "options": ["A) Always", "B) If loop completes without break", "C) If break is used", "D) Never"],
+                        "options": [
+                            "A) Always",
+                            "B) If loop completes without break",
+                            "C) If break is used",
+                            "D) Never",
+                        ],
                         "answer": "B",
-                        "explanation": "Loop's 'else' executes only if loop completes normally (no break)"
-                    }
-                ]
+                        "explanation": "Loop's 'else' executes only if loop completes normally (no break)",
+                    },
+                ],
             },
             {
                 "title": "Lists and List Operations",
@@ -754,28 +809,38 @@ for item in fruits:
                 "exercise": {
                     "description": "Create a list with 5 numbers, add a 6th using append, and print it reversed using slicing",
                     "hint": "nums = [1,2,3,4,5], nums.append(6), print(nums[::-1])",
-                    "check": lambda code: "append" in code.lower() and "[::-1]" in code
+                    "check": lambda code: "append" in code.lower() and "[::-1]" in code,
                 },
                 "quiz": [
                     {
                         "question": "What is [1,2,3][1:3]?",
                         "options": ["A) [1,2]", "B) [2,3]", "C) [1,2,3]", "D) [3]"],
                         "answer": "B",
-                        "explanation": "[1:3] gets elements at index 1 and 2: [2, 3]"
+                        "explanation": "[1:3] gets elements at index 1 and 2: [2, 3]",
                     },
                     {
                         "question": "What does list.pop() return?",
-                        "options": ["A) First element", "B) Last element", "C) Nothing", "D) The list"],
+                        "options": [
+                            "A) First element",
+                            "B) Last element",
+                            "C) Nothing",
+                            "D) The list",
+                        ],
                         "answer": "B",
-                        "explanation": "pop() without argument removes and returns the last element"
+                        "explanation": "pop() without argument removes and returns the last element",
                     },
                     {
                         "question": "What is [1,2,3][::-1]?",
-                        "options": ["A) [1,2,3]", "B) [3,2,1]", "C) [2,1,3]", PythonTutor.OPTION_D_ERROR],
+                        "options": [
+                            "A) [1,2,3]",
+                            "B) [3,2,1]",
+                            "C) [2,1,3]",
+                            PythonTutor.OPTION_D_ERROR,
+                        ],
                         "answer": "B",
-                        "explanation": "[::-1] reverses the list: [3, 2, 1]"
-                    }
-                ]
+                        "explanation": "[::-1] reverses the list: [3, 2, 1]",
+                    },
+                ],
             },
             {
                 "title": "Logical & Bitwise Operations",
@@ -785,7 +850,7 @@ PCEP EXAM TOPIC: Logical and bitwise operations
 
 LOGICAL OPERATORS (work with boolean values):
 - and: both must be True
-- or: at least one must be True  
+- or: at least one must be True
 - not: negation
 
 BITWISE OPERATORS (work with bits in integers):
@@ -851,28 +916,33 @@ print(x, y)  # 10, 5 (swapped without temp variable!)
                 "exercise": {
                     "description": "Use bitwise AND to check if number 17 is odd (hint: check last bit)",
                     "hint": "result = 17 & 1 (if 1, it's odd)",
-                    "check": lambda code: "&" in code and ("17" in code or "num" in code.lower())
+                    "check": lambda code: "&" in code and ("17" in code or "num" in code.lower()),
                 },
                 "quiz": [
                     {
                         "question": "What is 5 & 3?",
                         "options": ["A) 1", "B) 7", "C) 5", "D) 3"],
                         "answer": "A",
-                        "explanation": "5=101, 3=011, AND=001=1"
+                        "explanation": "5=101, 3=011, AND=001=1",
                     },
                     {
                         "question": "What is 8 << 2?",
                         "options": ["A) 16", "B) 4", "C) 32", "D) 2"],
                         "answer": "C",
-                        "explanation": "<< 2 shifts left 2 positions = multiply by 4: 8 * 4 = 32"
+                        "explanation": "<< 2 shifts left 2 positions = multiply by 4: 8 * 4 = 32",
                     },
                     {
                         "question": "What is ~0?",
-                        "options": ["A) 0", "B) -1", "C) 1", PythonTutor.OPTION_D_ERROR],
+                        "options": [
+                            "A) 0",
+                            "B) -1",
+                            "C) 1",
+                            PythonTutor.OPTION_D_ERROR,
+                        ],
                         "answer": "B",
-                        "explanation": "~x equals -x-1, so ~0 = -0-1 = -1"
-                    }
-                ]
+                        "explanation": "~x equals -x-1, so ~0 = -0-1 = -1",
+                    },
+                ],
             },
             # SECTION 4: Functions, Tuples, Dictionaries
             {
@@ -974,28 +1044,43 @@ print_info(name="Alice", age=25, city="NYC")
                 "exercise": {
                     "description": "Create a function 'rectangle_area' that takes width and height, returns their product",
                     "hint": "def rectangle_area(width, height): return width * height",
-                    "check": lambda code: 'def' in code.lower() and 'return' in code.lower()
+                    "check": lambda code: "def" in code.lower() and "return" in code.lower(),
                 },
                 "quiz": [
                     {
                         "question": "What does a function return if there's no return statement?",
-                        "options": ["A) 0", "B) None", "C) False", PythonTutor.OPTION_D_ERROR],
+                        "options": [
+                            "A) 0",
+                            "B) None",
+                            "C) False",
+                            PythonTutor.OPTION_D_ERROR,
+                        ],
                         "answer": "B",
-                        "explanation": "Functions without return statement return None"
+                        "explanation": "Functions without return statement return None",
                     },
                     {
                         "question": "What keyword is used to access global variable in function?",
-                        "options": ["A) global", "B) nonlocal", "C) extern", "D) public"],
+                        "options": [
+                            "A) global",
+                            "B) nonlocal",
+                            "C) extern",
+                            "D) public",
+                        ],
                         "answer": "A",
-                        "explanation": "'global' keyword allows modifying global variables inside functions"
+                        "explanation": "'global' keyword allows modifying global variables inside functions",
                     },
                     {
                         "question": "In def func(a, b=5):, what is b?",
-                        "options": ["A) Required parameter", "B) Default parameter", "C) Keyword parameter", "D) Variable parameter"],
+                        "options": [
+                            "A) Required parameter",
+                            "B) Default parameter",
+                            "C) Keyword parameter",
+                            "D) Variable parameter",
+                        ],
                         "answer": "B",
-                        "explanation": "b=5 is a default parameter (optional, has default value)"
-                    }
-                ]
+                        "explanation": "b=5 is a default parameter (optional, has default value)",
+                    },
+                ],
             },
             {
                 "title": "Tuples - Immutable Sequences",
@@ -1092,28 +1177,38 @@ back_to_list = list(my_tuple)
                 "exercise": {
                     "description": "Create a tuple with 3 values and unpack it into three variables",
                     "hint": "coords = (10, 20, 30) then x, y, z = coords",
-                    "check": lambda code: "," in code and "=" in code
+                    "check": lambda code: "," in code and "=" in code,
                 },
                 "quiz": [
                     {
                         "question": "How do you create a single-element tuple?",
                         "options": ["A) (1)", "B) (1,)", "C) [1]", "D) 1,"],
                         "answer": "B",
-                        "explanation": "(1,) creates a tuple. (1) is just 1 in parentheses. Comma is required!"
+                        "explanation": "(1,) creates a tuple. (1) is just 1 in parentheses. Comma is required!",
                     },
                     {
                         "question": "Can tuples be modified after creation?",
-                        "options": [PythonTutor.OPTION_A_YES, PythonTutor.OPTION_B_NO, "C) Only if nested", "D) Only first element"],
+                        "options": [
+                            PythonTutor.OPTION_A_YES,
+                            PythonTutor.OPTION_B_NO,
+                            "C) Only if nested",
+                            "D) Only first element",
+                        ],
                         "answer": "B",
-                        "explanation": "Tuples are immutable - cannot be changed after creation"
+                        "explanation": "Tuples are immutable - cannot be changed after creation",
                     },
                     {
                         "question": "What does a, b = b, a do?",
-                        "options": ["A) Error", "B) Swaps a and b", "C) Sets both to b", "D) Creates tuple"],
+                        "options": [
+                            "A) Error",
+                            "B) Swaps a and b",
+                            "C) Sets both to b",
+                            "D) Creates tuple",
+                        ],
                         "answer": "B",
-                        "explanation": "Tuple unpacking allows swapping without temporary variable"
-                    }
-                ]
+                        "explanation": "Tuple unpacking allows swapping without temporary variable",
+                    },
+                ],
             },
             {
                 "title": "Dictionaries - Key-Value Pairs",
@@ -1213,28 +1308,43 @@ print(squares)  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
                 "exercise": {
                     "description": "Create a dictionary 'student' with keys: name, grade, subject. Access grade using .get()",
                     "hint": "student = {'name': 'John', 'grade': 'A', 'subject': 'Math'}, student.get('grade')",
-                    "check": lambda code: "{" in code and ":" in code and ".get" in code.lower()
+                    "check": lambda code: "{" in code and ":" in code and ".get" in code.lower(),
                 },
                 "quiz": [
                     {
                         "question": "What happens if you access dict[key] and key doesn't exist?",
-                        "options": ["A) Returns None", "B) Returns 0", "C) KeyError", "D) Returns ''"],
+                        "options": [
+                            "A) Returns None",
+                            "B) Returns 0",
+                            "C) KeyError",
+                            "D) Returns ''",
+                        ],
                         "answer": "C",
-                        "explanation": "Accessing non-existent key with [] raises KeyError. Use .get() for safe access."
+                        "explanation": "Accessing non-existent key with [] raises KeyError. Use .get() for safe access.",
                     },
                     {
                         "question": "Can a list be a dictionary key?",
-                        "options": [PythonTutor.OPTION_A_YES, PythonTutor.OPTION_B_NO, "C) Only empty lists", "D) Only if unique"],
+                        "options": [
+                            PythonTutor.OPTION_A_YES,
+                            PythonTutor.OPTION_B_NO,
+                            "C) Only empty lists",
+                            "D) Only if unique",
+                        ],
                         "answer": "B",
-                        "explanation": "Dictionary keys must be immutable. Lists are mutable, so cannot be keys."
+                        "explanation": "Dictionary keys must be immutable. Lists are mutable, so cannot be keys.",
                     },
                     {
                         "question": "What does dict.items() return?",
-                        "options": ["A) Keys only", "B) Values only", "C) Key-value pairs", "D) Length"],
+                        "options": [
+                            "A) Keys only",
+                            "B) Values only",
+                            "C) Key-value pairs",
+                            "D) Length",
+                        ],
                         "answer": "C",
-                        "explanation": "dict.items() returns key-value pairs as tuples"
-                    }
-                ]
+                        "explanation": "dict.items() returns key-value pairs as tuples",
+                    },
+                ],
             },
             # SECTION 5: Modules and Packages
             {
@@ -1251,13 +1361,13 @@ MODULES:
 IMPORT SYNTAX:
 1. import module_name
    - Use: module_name.function()
-   
+
 2. import module_name as alias
    - Use: alias.function()
-   
+
 3. from module_name import function
    - Use: function()
-   
+
 4. from module_name import *
    - Imports all (not recommended!)
 
@@ -1336,28 +1446,43 @@ print(__name__)  # __main__ if running this file directly
                 "exercise": {
                     "description": "Import the math module and use sqrt to find the square root of 144",
                     "hint": "import math, then print(math.sqrt(144))",
-                    "check": lambda code: "import" in code.lower() and "math" in code.lower()
+                    "check": lambda code: "import" in code.lower() and "math" in code.lower(),
                 },
                 "quiz": [
                     {
                         "question": "After 'from math import pi', how do you access pi?",
-                        "options": ["A) math.pi", "B) pi", "C) import.pi", "D) from.pi"],
+                        "options": [
+                            "A) math.pi",
+                            "B) pi",
+                            "C) import.pi",
+                            "D) from.pi",
+                        ],
                         "answer": "B",
-                        "explanation": "'from math import pi' imports pi directly, use it without prefix"
+                        "explanation": "'from math import pi' imports pi directly, use it without prefix",
                     },
                     {
                         "question": "What is __name__ when file is run directly?",
-                        "options": ["A) '__main__'", "B) filename", "C) '__file__'", "D) 'main'"],
+                        "options": [
+                            "A) '__main__'",
+                            "B) filename",
+                            "C) '__file__'",
+                            "D) 'main'",
+                        ],
                         "answer": "A",
-                        "explanation": "__name__ is '__main__' when script is executed directly"
+                        "explanation": "__name__ is '__main__' when script is executed directly",
                     },
                     {
                         "question": "What does random.randint(1, 10) do?",
-                        "options": ["A) Random float 1-10", "B) Random int 1-9", "C) Random int 1-10", "D) Random int 0-10"],
+                        "options": [
+                            "A) Random float 1-10",
+                            "B) Random int 1-9",
+                            "C) Random int 1-10",
+                            "D) Random int 0-10",
+                        ],
                         "answer": "C",
-                        "explanation": "randint(a, b) returns random integer from a to b, inclusive"
-                    }
-                ]
+                        "explanation": "randint(a, b) returns random integer from a to b, inclusive",
+                    },
+                ],
             },
             {
                 "title": "Exception Handling",
@@ -1449,74 +1574,90 @@ while True:
                 "exercise": {
                     "description": "Write a try-except block that attempts int conversion and catches ValueError",
                     "hint": "try: x = int('abc') except ValueError: print('Error')",
-                    "check": lambda code: "try" in code.lower() and "except" in code.lower()
+                    "check": lambda code: "try" in code.lower() and "except" in code.lower(),
                 },
                 "quiz": [
                     {
                         "question": "Which exception is raised for int('hello')?",
-                        "options": ["A) TypeError", "B) ValueError", "C) KeyError", "D) NameError"],
+                        "options": [
+                            "A) TypeError",
+                            "B) ValueError",
+                            "C) KeyError",
+                            "D) NameError",
+                        ],
                         "answer": "B",
-                        "explanation": "Invalid conversion to int raises ValueError"
+                        "explanation": "Invalid conversion to int raises ValueError",
                     },
                     {
                         "question": "When does the 'finally' block execute?",
-                        "options": ["A) Only if no error", "B) Only if error", "C) Always", "D) Never"],
+                        "options": [
+                            "A) Only if no error",
+                            "B) Only if error",
+                            "C) Always",
+                            "D) Never",
+                        ],
                         "answer": "C",
-                        "explanation": "'finally' block always executes, regardless of exceptions"
+                        "explanation": "'finally' block always executes, regardless of exceptions",
                     },
                     {
                         "question": "What does 10 / 0 raise?",
-                        "options": ["A) ValueError", "B) TypeError", "C) ZeroDivisionError", "D) ArithmeticError"],
+                        "options": [
+                            "A) ValueError",
+                            "B) TypeError",
+                            "C) ZeroDivisionError",
+                            "D) ArithmeticError",
+                        ],
                         "answer": "C",
-                        "explanation": "Division by zero raises ZeroDivisionError"
-                    }
-                ]
-            }
+                        "explanation": "Division by zero raises ZeroDivisionError",
+                    },
+                ],
+            },
         ]
-        
+
         # Add quiz bank for practice exams
         self.practice_questions = self._generate_practice_bank()
-    
+
     def _generate_practice_bank(self):
         """Generate pool of all quiz questions for practice exams"""
         questions = []
         for lesson in self.lessons:
             if "quiz" in lesson:
                 for q in lesson["quiz"]:
-                    questions.append({
-                        **q,
-                        "topic": lesson["title"]
-                    })
+                    questions.append({**q, "topic": lesson["title"]})
         return questions
-    
+
     def load_progress(self):
         """Load user's progress from file"""
         if os.path.exists(self.progress_file):
             try:
-                with open(self.progress_file, 'r') as f:
+                with open(self.progress_file, "r") as f:
                     data = json.load(f)
-                    self.current_lesson = data.get('current_lesson', 0)
-                    self.completed_lessons = set(data.get('completed_lessons', []))
-                    self.quiz_scores = data.get('quiz_scores', {})
+                    self.current_lesson = data.get("current_lesson", 0)
+                    self.completed_lessons = set(data.get("completed_lessons", []))
+                    self.quiz_scores = data.get("quiz_scores", {})
             except Exception:
                 pass
-    
+
     def save_progress(self):
         """Save user's progress to file"""
         try:
-            with open(self.progress_file, 'w') as f:
-                json.dump({
-                    'current_lesson': self.current_lesson,
-                    'completed_lessons': list(self.completed_lessons),
-                    'quiz_scores': self.quiz_scores
-                }, f, indent=2)
+            with open(self.progress_file, "w") as f:
+                json.dump(
+                    {
+                        "current_lesson": self.current_lesson,
+                        "completed_lessons": list(self.completed_lessons),
+                        "quiz_scores": self.quiz_scores,
+                    },
+                    f,
+                    indent=2,
+                )
         except Exception:
             pass
-    
+
     def clear_screen(self):
         """Clear the terminal screen"""
-        os.system('clear' if os.name != 'nt' else 'cls')
-    
+        os.system("clear" if os.name != "nt" else "cls")
+
     def display_menu(self):
         """Display main menu"""
         self.clear_screen()
@@ -1524,23 +1665,26 @@ while True:
         print("  🎓 PCEP PYTHON CERTIFICATION EXAM TUTOR")
         print("  Python Certified Entry-Level Programmer Preparation")
         print("=" * 70)
-        
+
         # Calculate overall progress
         total_lessons = len(self.lessons)
         completed = len(self.completed_lessons)
         progress_pct = (completed / total_lessons * 100) if total_lessons > 0 else 0
-        
+
         # Calculate quiz performance
         total_quiz_score = sum(self.quiz_scores.values())
         total_quizzes = len(self.quiz_scores)
         avg_score = (total_quiz_score / total_quizzes) if total_quizzes > 0 else 0
-        
-        print(f"\n📊 Progress: {completed}/{total_lessons} lessons ({progress_pct:.0f}%)", end="")
+
+        print(
+            f"\n📊 Progress: {completed}/{total_lessons} lessons ({progress_pct:.0f}%)",
+            end="",
+        )
         if total_quizzes > 0:
             print(f" | Quiz Average: {avg_score:.0f}%")
         else:
             print()
-        
+
         # Group lessons by section
         current_section = ""
         for i, lesson in enumerate(self.lessons):
@@ -1548,17 +1692,17 @@ while True:
             if section != current_section:
                 print(f"\n{section}:")
                 current_section = section
-            
+
             status = "✓" if i in self.completed_lessons else " "
             current = "→ " if i == self.current_lesson else "  "
-            
+
             # Show quiz score if available
             quiz_info = ""
             if str(i) in self.quiz_scores:
                 quiz_info = f" [Quiz: {self.quiz_scores[str(i)]}%]"
-            
-            print(f"{current}[{status}] {i+1}. {lesson['title']}{quiz_info}")
-        
+
+            print(f"{current}[{status}] {i + 1}. {lesson['title']}{quiz_info}")
+
         print("\n" + "=" * 70)
         print("\n📚 Commands:")
         print("  [number] - Go to lesson")
@@ -1566,36 +1710,36 @@ while True:
         print("  e - Take practice exam (20 random questions)")
         print("  s - Show study tips | r - Reset progress | q - Quit")
         print("=" * 70)
-    
+
     def display_lesson(self, lesson_num):
         """Display a lesson with example and exercise"""
         if lesson_num < 0 or lesson_num >= len(self.lessons):
             return
-        
+
         lesson = self.lessons[lesson_num]
         self.clear_screen()
-        
+
         print("=" * 70)
         print(f"  LESSON {lesson_num + 1}: {lesson['title']}")
         print(f"  {lesson.get('section', '')}")
         print("=" * 70)
-        
+
         print("\n📚 LESSON CONTENT:")
-        print(lesson['content'])
-        
+        print(lesson["content"])
+
         print("\n💡 EXAMPLE CODE:")
         print("-" * 70)
-        print(lesson['example'])
+        print(lesson["example"])
         print("-" * 70)
-        
+
         print("\n✏️  EXERCISE:")
-        print(lesson['exercise']['description'])
+        print(lesson["exercise"]["description"])
         print(f"💭 Hint: {lesson['exercise']['hint']}")
-        
+
         # Show quiz info if available
         if "quiz" in lesson:
             print(f"\n📝 Quiz available ({len(lesson['quiz'])} questions)")
-        
+
         print("\n" + "=" * 70)
         print("Options:")
         print("  t - Try the example code")
@@ -1604,21 +1748,21 @@ while True:
             print("  q - Take the quiz for this lesson")
         print("  m - Back to menu")
         print("=" * 70)
-    
+
     def run_example(self, lesson_num):
         """Run the example code for a lesson"""
         lesson = self.lessons[lesson_num]
         print("\n🔧 Running example code...\n")
         print("-" * 70)
-        
+
         try:
-            exec(lesson['example'])
+            exec(lesson["example"])
         except Exception as e:
             print(f"Error: {e}")
-        
+
         print("-" * 70)
         input(self.PRESS_ENTER_NEWLINE)
-    
+
     def take_quiz(self, lesson_num):
         """Take quiz for specific lesson"""
         lesson = self.lessons[lesson_num]
@@ -1626,7 +1770,7 @@ while True:
             print("\nNo quiz available for this lesson.")
             input(self.PRESS_ENTER)
             return
-        
+
         quiz = lesson["quiz"]
         print("\n" + "=" * 70)
         print(f"  📝 QUIZ: {lesson['title']}")
@@ -1634,7 +1778,7 @@ while True:
         print(f"\nThis quiz has {len(quiz)} questions. Answer carefully!")
         print("Enter A, B, C, or D for each question.\n")
         input("Press Enter to start...")
-        
+
         correct = 0
         for i, q in enumerate(quiz, 1):
             self.clear_screen()
@@ -1644,27 +1788,27 @@ while True:
             for opt in q["options"]:
                 print(f"  {opt}")
             print()
-            
+
             while True:
                 answer = input("Your answer (A/B/C/D): ").strip().upper()
-                if answer in ['A', 'B', 'C', 'D']:
+                if answer in ["A", "B", "C", "D"]:
                     break
                 print("Please enter A, B, C, or D")
-            
+
             if answer == q["answer"]:
                 print("\n✅ Correct!")
                 correct += 1
             else:
                 print(f"\n❌ Incorrect. The correct answer is {q['answer']}")
-            
+
             print(f"\n💡 Explanation: {q['explanation']}")
             input("\nPress Enter for next question...")
-        
+
         # Calculate score
         score = int((correct / len(quiz)) * 100)
         self.quiz_scores[str(lesson_num)] = score
         self.save_progress()
-        
+
         # Show results
         self.clear_screen()
         print("\n" + "=" * 70)
@@ -1672,7 +1816,7 @@ while True:
         print("=" * 70)
         print(f"\nYou got {correct} out of {len(quiz)} questions correct!")
         print(f"Score: {score}%\n")
-        
+
         if score >= 80:
             print("🎉 Excellent work! You've mastered this topic!")
             self.completed_lessons.add(lesson_num)
@@ -1681,14 +1825,14 @@ while True:
             print("👍 Good job! Review the lesson to improve further.")
         else:
             print("📚 Keep studying! Review the lesson and try again.")
-        
+
         input(self.PRESS_ENTER_NEWLINE)
-    
+
     def do_exercise(self, lesson_num):
         """Interactive exercise for a lesson"""
         lesson = self.lessons[lesson_num]
-        exercise = lesson['exercise']
-        
+        exercise = lesson["exercise"]
+
         print("\n" + "=" * 70)
         print("EXERCISE MODE")
         print("=" * 70)
@@ -1697,23 +1841,23 @@ while True:
         print("\nType your Python code below. Type 'done' on a new line when finished.")
         print("Type 'cancel' to go back.")
         print("-" * 70)
-        
+
         code_lines = []
         while True:
             try:
                 line = input(">>> " if not code_lines else "... ")
-                if line.strip().lower() == 'done':
+                if line.strip().lower() == "done":
                     break
-                elif line.strip().lower() == 'cancel':
+                elif line.strip().lower() == "cancel":
                     return
                 code_lines.append(line)
             except (EOFError, KeyboardInterrupt):
                 return
-        
+
         user_code = "\n".join(code_lines)
-        
+
         # Check if exercise is correct
-        if exercise['check'](user_code):
+        if exercise["check"](user_code):
             print("\n✅ Great job! Your solution looks good!")
             print("\nLet's run it:")
             print("-" * 70)
@@ -1722,14 +1866,14 @@ while True:
             except Exception as e:
                 print(f"Runtime error: {e}")
             print("-" * 70)
-            
+
             print("\n🎉 Exercise completed!")
         else:
             print("\n⚠️  Your code doesn't quite match the exercise requirements.")
             print("💭 Check the hint and try again!")
-        
+
         input(self.PRESS_ENTER_NEWLINE)
-    
+
     def _ask_exam_question(self, i, q):
         """Ask a single exam question and return answer"""
         self.clear_screen()
@@ -1739,36 +1883,36 @@ while True:
         for opt in q["options"]:
             print(f"  {opt}")
         print()
-        
+
         while True:
             answer = input("Your answer (A/B/C/D): ").strip().upper()
-            if answer in ['A', 'B', 'C', 'D']:
+            if answer in ["A", "B", "C", "D"]:
                 return answer
             print("Please enter A, B, C, or D")
-    
+
     def _show_exam_results(self, correct, results):
         """Display exam results and review incorrect answers"""
         score = int((correct / 20) * 100)
-        
+
         self.clear_screen()
         print("\n" + "=" * 70)
         print("  📊 PRACTICE EXAM RESULTS")
         print("=" * 70)
         print(f"\nYou got {correct} out of 20 questions correct!")
         print(f"Score: {score}%\n")
-        
+
         if score >= 70:
             print("🎉 PASS! You're ready for the PCEP exam!")
         else:
             print("📚 Keep studying! Review weak areas and try again.")
-        
+
         print(f"\nPassing score: 70% (You scored: {score}%)")
-        
+
         # Show incorrect answers
         print("\n" + "=" * 70)
         print("Review Incorrect Answers:")
         print("=" * 70)
-        
+
         for i, r in enumerate(results, 1):
             if not r["is_correct"]:
                 print(f"\n❌ Q{i}: {r['question']}")
@@ -1776,19 +1920,19 @@ while True:
                 print(f"   Correct: {r['correct_answer']}")
                 print(f"   Topic: {r['topic']}")
                 print(f"   Explanation: {r['explanation']}")
-        
+
         input(self.PRESS_ENTER_NEWLINE)
-    
+
     def take_practice_exam(self):
         """Take a practice exam with random questions"""
         if len(self.practice_questions) < 20:
             print("\nNot enough questions available for practice exam.")
             input(self.PRESS_ENTER)
             return
-        
+
         # Select 20 random questions
         questions = random.sample(self.practice_questions, 20)
-        
+
         print("\n" + "=" * 70)
         print("  🎯 PCEP PRACTICE EXAM")
         print("=" * 70)
@@ -1796,35 +1940,38 @@ while True:
         print("Passing score: 70%")
         print("\nAnswer carefully - this simulates the real exam!")
         input(self.PRESS_ENTER_NEWLINE)
-        
+
         correct = 0
         results = []
-        
+
         for i, q in enumerate(questions, 1):
             answer = self._ask_exam_question(i, q)
-            is_correct = (answer == q["answer"])
-            
+            is_correct = answer == q["answer"]
+
             if is_correct:
                 correct += 1
-            
-            results.append({
-                "question": q["question"],
-                "your_answer": answer,
-                "correct_answer": q["answer"],
-                "is_correct": is_correct,
-                "explanation": q["explanation"],
-                "topic": q["topic"]
-            })
-        
+
+            results.append(
+                {
+                    "question": q["question"],
+                    "your_answer": answer,
+                    "correct_answer": q["answer"],
+                    "is_correct": is_correct,
+                    "explanation": q["explanation"],
+                    "topic": q["topic"],
+                }
+            )
+
         self._show_exam_results(correct, results)
-    
+
     def show_study_tips(self):
         """Display PCEP exam study tips"""
         self.clear_screen()
         print("=" * 70)
         print("  📖 PCEP EXAM STUDY TIPS")
         print("=" * 70)
-        print("""
+        print(
+            """
 ABOUT THE PCEP EXAM:
 - 30 multiple-choice questions
 - 40 minutes
@@ -1835,19 +1982,19 @@ EXAM SECTIONS:
 1. Basic Concepts (18%)
    - Compilation vs interpretation
    - Python fundamentals
-   
+
 2. Data Types, Variables, I/O, Operators (29%)
    - Literals and variables
    - Operators and expressions
    - Strings and I/O
-   
+
 3. Boolean, Conditionals, Loops, Lists, Logic (25%)
    - Boolean values
    - Conditional execution
    - Loops (for, while)
    - Lists and operations
    - Logical and bitwise operators
-   
+
 4. Functions, Tuples, Dictionaries, Modules (28%)
    - Function definition and calling
    - Tuples
@@ -1880,30 +2027,31 @@ KEY THINGS TO MEMORIZE:
 - Module import syntax variations
 - Mutable vs immutable types
 - Boolean truthy/falsy values
-        """)
+        """
+        )
         input(self.PRESS_ENTER_NEWLINE)
-    
+
     def _handle_navigation_choice(self, choice):
         """Handle navigation commands (n, p)"""
-        if choice == 'n' and self.current_lesson < len(self.lessons) - 1:
+        if choice == "n" and self.current_lesson < len(self.lessons) - 1:
             self.current_lesson += 1
             return True
-        if choice == 'p' and self.current_lesson > 0:
+        if choice == "p" and self.current_lesson > 0:
             self.current_lesson -= 1
             return True
         return False
-    
+
     def _handle_reset_progress(self):
         """Handle progress reset command"""
         confirm = input("Are you sure you want to reset progress? (yes/no): ")
-        if confirm.lower() == 'yes':
+        if confirm.lower() == "yes":
             self.completed_lessons.clear()
             self.quiz_scores.clear()
             self.current_lesson = 0
             self.save_progress()
             print("Progress reset!")
             input(self.PRESS_ENTER)
-    
+
     def _handle_lesson_choice(self, choice):
         """Handle numeric lesson selection"""
         lesson_num = int(choice) - 1
@@ -1912,44 +2060,44 @@ KEY THINGS TO MEMORIZE:
             self.lesson_mode(lesson_num)
             return True
         return False
-    
+
     def run(self):
         """Main application loop"""
         while True:
             self.display_menu()
-            
+
             choice = input("\nYour choice: ").strip().lower()
-            
-            if choice == 'q':
+
+            if choice == "q":
                 print("\n👋 Good luck on your PCEP exam! Keep coding!")
                 break
             elif self._handle_navigation_choice(choice):
                 continue
-            elif choice == 'e':
+            elif choice == "e":
                 self.take_practice_exam()
-            elif choice == 's':
+            elif choice == "s":
                 self.show_study_tips()
-            elif choice == 'r':
+            elif choice == "r":
                 self._handle_reset_progress()
             elif choice.isdigit():
                 self._handle_lesson_choice(choice)
             else:
                 print("Invalid choice!")
                 input(self.PRESS_ENTER)
-    
+
     def lesson_mode(self, lesson_num):
         """Interactive mode for a specific lesson"""
         while True:
             self.display_lesson(lesson_num)
             choice = input("\nYour choice: ").strip().lower()
-            
-            if choice == 'm':
+
+            if choice == "m":
                 break
-            elif choice == 't':
+            elif choice == "t":
                 self.run_example(lesson_num)
-            elif choice == 'e':
+            elif choice == "e":
                 self.do_exercise(lesson_num)
-            elif choice == 'q' and "quiz" in self.lessons[lesson_num]:
+            elif choice == "q" and "quiz" in self.lessons[lesson_num]:
                 self.take_quiz(lesson_num)
             else:
                 print("Invalid choice!")

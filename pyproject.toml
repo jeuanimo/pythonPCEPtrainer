@@ -11,10 +11,10 @@ readme = "README.md"
 license = {text = "MIT"}
 
 [tool.black]
-line-length = 88
+line-length = 160
 
 [tool.ruff]
-line-length = 88
+line-length = 160
 select = ["E", "F", "W", "C", "I"]
 
 [tool.isort]
