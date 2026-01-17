@@ -326,6 +326,67 @@ class PythonTutorGUI:
 
         output_text.config(state=tk.DISABLED)
 
+    def _show_quiz_question(self, quiz_window, quiz, q_num, quiz_answers):
+        """Display a single quiz question"""
+        for widget in quiz_window.winfo_children():
+            widget.destroy()
+
+        if q_num >= len(quiz):
+            self._show_quiz_results(quiz_window, quiz, quiz_answers)
+            return
+
+        q = quiz[q_num]
+        tk.Label(quiz_window, text=f"Question {q_num + 1} of {len(quiz)}", font=("Arial", 10), fg="#7f8c8d").pack(pady=10)
+        tk.Label(quiz_window, text=q["question"], font=("Arial", 12), wraplength=650).pack(pady=20)
+
+        var = tk.StringVar()
+        for option in q["options"]:
+            tk.Radiobutton(quiz_window, text=option, variable=var, value=option[0], font=("Arial", 10)).pack(anchor=tk.W, padx=50)
+
+        def submit_answer():
+            answer = var.get()
+            if not answer:
+                messagebox.showwarning("No Answer", "Please select an answer!")
+                return
+            is_correct = answer == q["answer"]
+            quiz_answers.append({"question": q["question"], "answer": answer, "correct": q["answer"], "is_correct": is_correct})
+            self._show_quiz_feedback(is_correct, q)
+            self._show_quiz_question(quiz_window, quiz, q_num + 1, quiz_answers)
+
+        tk.Button(quiz_window, text="Submit Answer", command=submit_answer, width=15).pack(pady=20)
+
+    def _show_quiz_feedback(self, is_correct, question):
+        """Show immediate feedback for quiz answer"""
+        if is_correct:
+            messagebox.showinfo("✅ Correct!", f"Well done!\n\n{question['explanation']}")
+        else:
+            messagebox.showinfo("❌ Incorrect", f"The correct answer is {question['answer']}\n\n{question['explanation']}")
+
+    def _show_quiz_results(self, quiz_window, quiz, quiz_answers):
+        """Display quiz results"""
+        for widget in quiz_window.winfo_children():
+            widget.destroy()
+
+        correct = sum(1 for a in quiz_answers if a["is_correct"])
+        score = int((correct / len(quiz)) * 100)
+
+        tk.Label(quiz_window, text="📊 Quiz Results", font=("Arial", 16, "bold")).pack(pady=20)
+        tk.Label(quiz_window, text=f"You got {correct} out of {len(quiz)} questions correct!", font=("Arial", 12)).pack(pady=10)
+        tk.Label(quiz_window, text=f"Score: {score}%", font=("Arial", 14, "bold"), fg="#2c3e50").pack(pady=10)
+
+        message, color = self._get_score_message(score)
+        tk.Label(quiz_window, text=message, font=("Arial", 11), fg=color).pack(pady=10)
+        tk.Button(quiz_window, text="Close", command=quiz_window.destroy, width=15).pack(pady=20)
+
+    def _get_score_message(self, score):
+        """Get feedback message based on score"""
+        if score >= 80:
+            return ("🎉 Excellent work! You've mastered this topic!", "#27ae60")
+        elif score >= 60:
+            return ("👍 Good job! Review the lesson to improve further.", "#f39c12")
+        else:
+            return ("📚 Keep studying! Review the lesson and try again.", "#e74c3c")
+
     def take_quiz(self, lesson_num):
         """Take the quiz for a lesson"""
         lesson = self.lessons[lesson_num]
@@ -339,93 +400,85 @@ class PythonTutorGUI:
         quiz_window.title(f"Quiz: {lesson['title']}")
         quiz_window.geometry("700x500")
 
-        self.quiz_answers = []
-        self.current_question = 0
+        quiz_answers = []
+        self._show_quiz_question(quiz_window, quiz, 0, quiz_answers)
 
-        def show_question(q_num):
-            for widget in quiz_window.winfo_children():
-                widget.destroy()
+    def _show_exam_question(self, exam_window, questions, q_num, exam_answers):
+        """Display a single exam question"""
+        for widget in exam_window.winfo_children():
+            widget.destroy()
 
-            if q_num >= len(quiz):
-                show_results()
+        if q_num >= 20:
+            self._show_exam_results(exam_window, exam_answers)
+            return
+
+        q = questions[q_num]
+        header_frame = tk.Frame(exam_window)
+        header_frame.pack(fill=tk.X, pady=10)
+        tk.Label(header_frame, text="🎯 PCEP Practice Exam", font=("Arial", 14, "bold")).pack()
+        tk.Label(header_frame, text=f"Question {q_num + 1} of 20", font=("Arial", 10), fg="#7f8c8d").pack()
+
+        tk.Label(exam_window, text=q["question"], font=("Arial", 12), wraplength=750).pack(pady=20)
+
+        var = tk.StringVar()
+        for option in q["options"]:
+            tk.Radiobutton(exam_window, text=option, variable=var, value=option[0], font=("Arial", 10)).pack(anchor=tk.W, padx=50)
+
+        def submit_answer():
+            answer = var.get()
+            if not answer:
+                messagebox.showwarning("No Answer", "Please select an answer!")
                 return
+            is_correct = answer == q["answer"]
+            exam_answers.append({"question": q["question"], "answer": answer, "correct": q["answer"], "is_correct": is_correct, "topic": q["topic"], "explanation": q["explanation"]})
+            self._show_exam_question(exam_window, questions, q_num + 1, exam_answers)
 
-            q = quiz[q_num]
+        tk.Button(exam_window, text="Next →", command=submit_answer, width=15).pack(pady=20)
 
-            # Question header
-            tk.Label(
-                quiz_window, text=f"Question {q_num + 1} of {len(quiz)}", font=("Arial", 10), fg="#7f8c8d"
-            ).pack(pady=10)
+    def _show_exam_results(self, exam_window, exam_answers):
+        """Display exam results"""
+        for widget in exam_window.winfo_children():
+            widget.destroy()
 
-            # Question
-            tk.Label(quiz_window, text=q["question"], font=("Arial", 12), wraplength=650).pack(pady=20)
+        correct = sum(1 for a in exam_answers if a["is_correct"])
+        score = int((correct / 20) * 100)
 
-            # Options
-            var = tk.StringVar()
-            for option in q["options"]:
-                tk.Radiobutton(quiz_window, text=option, variable=var, value=option[0], font=("Arial", 10)).pack(
-                    anchor=tk.W, padx=50
-                )
+        tk.Label(exam_window, text="📊 Practice Exam Results", font=("Arial", 16, "bold")).pack(pady=20)
+        tk.Label(exam_window, text=f"Score: {score}%", font=("Arial", 14, "bold")).pack(pady=10)
 
-            def submit_answer():
-                answer = var.get()
-                if not answer:
-                    messagebox.showwarning("No Answer", "Please select an answer!")
-                    return
+        if score >= 70:
+            message = "🎉 PASS! You're ready for the PCEP exam!"
+            color = "#27ae60"
+        else:
+            message = "📚 Keep studying! Review weak areas and try again."
+            color = "#e74c3c"
 
-                is_correct = answer == q["answer"]
-                self.quiz_answers.append(
-                    {"question": q["question"], "answer": answer, "correct": q["answer"], "is_correct": is_correct}
-                )
+        tk.Label(exam_window, text=message, font=("Arial", 12), fg=color).pack(pady=10)
+        tk.Label(exam_window, text="Passing score: 70%", font=("Arial", 10), fg="#7f8c8d").pack()
 
-                # Show immediate feedback
-                if is_correct:
-                    messagebox.showinfo("✅ Correct!", f"Well done!\n\n{q['explanation']}")
-                else:
-                    messagebox.showinfo(
-                        "❌ Incorrect", f"The correct answer is {q['answer']}\n\n{q['explanation']}"
-                    )
+        def show_review():
+            review_window = tk.Toplevel(exam_window)
+            review_window.title("Exam Review")
+            review_window.geometry("700x500")
 
-                show_question(q_num + 1)
+            tk.Label(review_window, text="Review Incorrect Answers", font=("Arial", 12, "bold")).pack(pady=10)
 
-            tk.Button(quiz_window, text="Submit Answer", command=submit_answer, width=15).pack(pady=20)
+            review_text = scrolledtext.ScrolledText(review_window, wrap=tk.WORD, font=("Courier", 9))
+            review_text.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
 
-        def show_results():
-            for widget in quiz_window.winfo_children():
-                widget.destroy()
+            for i, a in enumerate(exam_answers, 1):
+                if not a["is_correct"]:
+                    review_text.insert(tk.END, f"\nQ{i}: {a['question']}\n")
+                    review_text.insert(tk.END, f"Your answer: {a['answer']}\n")
+                    review_text.insert(tk.END, f"Correct: {a['correct']}\n")
+                    review_text.insert(tk.END, f"Topic: {a['topic']}\n")
+                    review_text.insert(tk.END, f"Explanation: {a['explanation']}\n")
+                    review_text.insert(tk.END, "-" * 70 + "\n")
 
-            correct = sum(1 for a in self.quiz_answers if a["is_correct"])
-            score = int((correct / len(quiz)) * 100)
+            review_text.config(state=tk.DISABLED)
 
-            # Save score
-            self.quiz_scores[str(lesson_num)] = score
-            if score >= 80:
-                self.completed_lessons.add(lesson_num)
-            self.save_progress()
-
-            tk.Label(quiz_window, text="📊 Quiz Results", font=("Arial", 16, "bold")).pack(pady=20)
-
-            tk.Label(
-                quiz_window, text=f"You got {correct} out of {len(quiz)} questions correct!", font=("Arial", 12)
-            ).pack(pady=10)
-
-            tk.Label(quiz_window, text=f"Score: {score}%", font=("Arial", 14, "bold"), fg="#2c3e50").pack(pady=10)
-
-            if score >= 80:
-                message = "🎉 Excellent work! You've mastered this topic!"
-                color = "#27ae60"
-            elif score >= 60:
-                message = "👍 Good job! Review the lesson to improve further."
-                color = "#f39c12"
-            else:
-                message = "📚 Keep studying! Review the lesson and try again."
-                color = "#e74c3c"
-
-            tk.Label(quiz_window, text=message, font=("Arial", 11), fg=color).pack(pady=10)
-
-            tk.Button(quiz_window, text="Close", command=quiz_window.destroy, width=15).pack(pady=20)
-
-        show_question(0)
+        tk.Button(exam_window, text="Review Mistakes", command=show_review, width=20).pack(pady=10)
+        tk.Button(exam_window, text="Close", command=exam_window.destroy, width=20).pack(pady=5)
 
     def take_practice_exam(self):
         """Take a 20-question practice exam"""
@@ -439,105 +492,8 @@ class PythonTutorGUI:
         exam_window.title("PCEP Practice Exam")
         exam_window.geometry("800x600")
 
-        self.exam_answers = []
-        self.current_exam_question = 0
-
-        def show_question(q_num):
-            for widget in exam_window.winfo_children():
-                widget.destroy()
-
-            if q_num >= 20:
-                show_results()
-                return
-
-            q = questions[q_num]
-
-            # Header
-            header_frame = tk.Frame(exam_window)
-            header_frame.pack(fill=tk.X, pady=10)
-
-            tk.Label(header_frame, text="🎯 PCEP Practice Exam", font=("Arial", 14, "bold")).pack()
-            tk.Label(header_frame, text=f"Question {q_num + 1} of 20", font=("Arial", 10), fg="#7f8c8d").pack()
-
-            # Question
-            tk.Label(exam_window, text=q["question"], font=("Arial", 12), wraplength=750).pack(pady=20)
-
-            # Options
-            var = tk.StringVar()
-            for option in q["options"]:
-                tk.Radiobutton(exam_window, text=option, variable=var, value=option[0], font=("Arial", 10)).pack(
-                    anchor=tk.W, padx=50
-                )
-
-            def submit_answer():
-                answer = var.get()
-                if not answer:
-                    messagebox.showwarning("No Answer", "Please select an answer!")
-                    return
-
-                is_correct = answer == q["answer"]
-                self.exam_answers.append(
-                    {
-                        "question": q["question"],
-                        "answer": answer,
-                        "correct": q["answer"],
-                        "is_correct": is_correct,
-                        "topic": q["topic"],
-                        "explanation": q["explanation"],
-                    }
-                )
-
-                show_question(q_num + 1)
-
-            tk.Button(exam_window, text="Next →", command=submit_answer, width=15).pack(pady=20)
-
-        def show_results():
-            for widget in exam_window.winfo_children():
-                widget.destroy()
-
-            correct = sum(1 for a in self.exam_answers if a["is_correct"])
-            score = int((correct / 20) * 100)
-
-            tk.Label(exam_window, text="📊 Practice Exam Results", font=("Arial", 16, "bold")).pack(pady=20)
-
-            tk.Label(exam_window, text=f"Score: {score}%", font=("Arial", 14, "bold")).pack(pady=10)
-
-            if score >= 70:
-                message = "🎉 PASS! You're ready for the PCEP exam!"
-                color = "#27ae60"
-            else:
-                message = "📚 Keep studying! Review weak areas and try again."
-                color = "#e74c3c"
-
-            tk.Label(exam_window, text=message, font=("Arial", 12), fg=color).pack(pady=10)
-            tk.Label(exam_window, text=f"Passing score: 70%", font=("Arial", 10), fg="#7f8c8d").pack()
-
-            # Review button
-            def show_review():
-                review_window = tk.Toplevel(exam_window)
-                review_window.title("Exam Review")
-                review_window.geometry("700x500")
-
-                tk.Label(review_window, text="Review Incorrect Answers", font=("Arial", 12, "bold")).pack(pady=10)
-
-                review_text = scrolledtext.ScrolledText(review_window, wrap=tk.WORD, font=("Courier", 9))
-                review_text.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
-
-                for i, a in enumerate(self.exam_answers, 1):
-                    if not a["is_correct"]:
-                        review_text.insert(tk.END, f"\nQ{i}: {a['question']}\n")
-                        review_text.insert(tk.END, f"Your answer: {a['answer']}\n")
-                        review_text.insert(tk.END, f"Correct: {a['correct']}\n")
-                        review_text.insert(tk.END, f"Topic: {a['topic']}\n")
-                        review_text.insert(tk.END, f"Explanation: {a['explanation']}\n")
-                        review_text.insert(tk.END, "-" * 70 + "\n")
-
-                review_text.config(state=tk.DISABLED)
-
-            tk.Button(exam_window, text="Review Mistakes", command=show_review, width=20).pack(pady=10)
-            tk.Button(exam_window, text="Close", command=exam_window.destroy, width=20).pack(pady=5)
-
-        show_question(0)
+        exam_answers = []
+        self._show_exam_question(exam_window, questions, 0, exam_answers)
 
     def show_study_tips(self):
         """Display study tips window"""
@@ -660,7 +616,7 @@ KEY THINGS TO MEMORIZE:
 def main():
     """Entry point for the GUI application"""
     root = tk.Tk()
-    app = PythonTutorGUI(root)
+    PythonTutorGUI(root)
     root.mainloop()
 
 
