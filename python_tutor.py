@@ -2,6 +2,15 @@
 """
 PCEP Python Exam Tutor - Interactive Certification Preparation
 Comprehensive coverage of all PCEP exam topics with practice questions!
+
+This module provides an interactive terminal-based tutor for PCEP (Certified Entry-Level
+Python Programmer) exam preparation. Features include:
+- 16 comprehensive lessons covering all PCEP exam topics
+- Interactive quizzes after each lesson
+- 20-question practice exams
+- Progress tracking and persistence
+- 245+ practice questions (original + study guide)
+- Real exam-style questions from Certify4Sure study materials
 """
 
 import sys
@@ -11,7 +20,19 @@ import random
 
 
 class PythonTutor:
-    # Constants for duplicate literals
+    """
+    Main tutor class managing lessons, quizzes, and user progress.
+    
+    Attributes:
+        progress_file (str): JSON file for saving user progress
+        current_lesson (int): Index of current lesson
+        completed_lessons (set): Lessons marked as completed (80%+ quiz score)
+        quiz_scores (dict): Quiz scores keyed by lesson index
+        lessons (list): All 16 lessons with content, examples, exercises, and quizzes
+        practice_questions (list): Pool of 245+ questions for practice exams
+    """
+    
+    # Constants for duplicate literals (reduces code duplication)
     OPTION_A_YES = "A) Yes"
     OPTION_B_NO = "B) No"
     OPTION_D_ERROR = "D) Error"
@@ -19,12 +40,37 @@ class PythonTutor:
     PRESS_ENTER_NEWLINE = "\nPress Enter to continue..."
 
     def __init__(self):  # NOSONAR - data initialization increases complexity
+        """
+        Initialize the tutor with all 16 lessons and load user progress.
+        
+        Sets up:
+        - 15 original lessons covering PCEP exam topics
+        - 1 bonus lesson with 20 study guide questions
+        - Practice question pool (245+ questions)
+        - Progress persistence (quiz scores, completed lessons)
+        """
         self.progress_file = "pcep_tutor_progress.json"
         self.current_lesson = 0
         self.completed_lessons = set()
         self.quiz_scores = {}
         self.load_progress()
         
+        # LESSONS STRUCTURE: 16 comprehensive lessons covering all PCEP topics
+        # Each lesson contains:
+        # - title: Lesson name
+        # - section: PCEP exam section reference
+        # - content: Detailed explanation with key concepts and theory
+        # - example: Real-world Python code examples
+        # - exercise: Guided practice with hint and validation checker
+        # - quiz: 3 multiple-choice questions to test understanding
+        #
+        # PCEP EXAM TOPICS COVERED:
+        # Section 1: Basic Concepts (Python fundamentals, compilation)
+        # Section 2: Data Types (literals, variables, operators, I/O)
+        # Section 3: Boolean, Conditionals, Loops (logic, control flow)
+        # Section 4: Data Structures (lists, dictionaries, tuples, sets)
+        # Section 5: Functions (definition, scope, arguments, returns)
+        # Section 6: Advanced Topics (modules, strings, exception handling)
         self.lessons = [
             # SECTION 1: Introduction to Python and Computer Programming
             {
@@ -1661,7 +1707,17 @@ print("o" in message)       # True
         self.practice_questions = self._generate_practice_bank()
     
     def _generate_practice_bank(self):
-        """Generate pool of all quiz questions plus PDF study guide questions for practice exams"""
+        """
+        Generate comprehensive question pool for practice exams.
+        
+        Combines:
+        - 62 questions from 15 lesson quizzes
+        - 183 questions from Certify4Sure study guide (JSON file)
+        - Total: 245+ questions for diverse exam practice
+        
+        Returns:
+            list: Question dictionaries with question, options, answer, explanation, topic
+        """
         questions = []
         
         # Add all lesson quiz questions
@@ -1680,7 +1736,17 @@ print("o" in message)       # True
         return questions
     
     def _load_pdf_study_questions(self):
-        """Load 183 PCEP exam questions from study guide"""
+        """
+        Load 183 PCEP exam questions from Certify4Sure study guide.
+        
+        Sources questions from PCEP_Questions.json containing:
+        - Original PDF exam questions with explanations
+        - Full 4-option multiple choice format
+        - Topic categorization
+        
+        Returns:
+            list: Formatted question dictionaries, empty list if file not found
+        """
         pdf_json_path = os.path.join(os.path.dirname(__file__), "PCEP_Questions.json")
         
         if not os.path.exists(pdf_json_path):
@@ -1805,7 +1871,28 @@ print("o" in message)       # True
         print("=" * 70)
     
     def display_lesson(self, lesson_num):
-        """Display a lesson with example and exercise"""
+        """
+        Display lesson content with examples and practice exercises.
+        
+        Displays:
+        1. Lesson title and section
+        2. Comprehensive lesson content with key concepts
+        3. Real-world code examples
+        4. Guided exercise with hints
+        
+        Topics covered across 16 lessons:
+        - Lesson 1-2: Python fundamentals, data types
+        - Lesson 3-4: Operators, control flow
+        - Lesson 5-7: Data structures (lists, dicts, tuples)
+        - Lesson 8-10: Functions, scope, error handling
+        - Lesson 11-13: Strings, I/O, modules
+        - Lesson 14: Bitwise operations, logic
+        - Lesson 15: Exception handling
+        - Lesson 16: Bonus study guide questions
+        
+        Args:
+            lesson_num (int): Index of lesson to display (0-15)
+        """
         if lesson_num < 0 or lesson_num >= len(self.lessons):
             return
         
@@ -1843,7 +1930,19 @@ print("o" in message)       # True
         print("=" * 70)
     
     def run_example(self, lesson_num):
-        """Run the example code for a lesson"""
+        """
+        Execute and display lesson example code in a sandboxed environment.
+        
+        Features:
+        - Safely executes example code with restricted built-ins
+        - Prevents access to dangerous functions (open, import, eval, etc.)
+        - Displays code output for learning
+        - Handles errors gracefully
+        - Uses whitelisted builtins for security
+        
+        Args:
+            lesson_num (int): Index of lesson whose examples to run
+        """
         lesson = self.lessons[lesson_num]
         print("\n🔧 Running example code...\n")
         print("-" * 70)
@@ -1868,7 +1967,21 @@ print("o" in message)       # True
         input(self.PRESS_ENTER_NEWLINE)
     
     def take_quiz(self, lesson_num):
-        """Take quiz for specific lesson"""
+        """
+        Take quiz for specific lesson.
+        
+        Process:
+        1. Retrieve quiz questions for the lesson
+        2. Display each question with 4 options
+        3. Validate user answer (A/B/C/D)
+        4. Show immediate feedback with explanation
+        5. Calculate final score
+        6. Mark lesson as complete if score >= 80%
+        7. Save progress to JSON file
+        
+        Args:
+            lesson_num (int): Index of lesson to quiz
+        """
         lesson = self.lessons[lesson_num]
         if "quiz" not in lesson:
             print("\nNo quiz available for this lesson.")
@@ -1933,7 +2046,22 @@ print("o" in message)       # True
         input(self.PRESS_ENTER_NEWLINE)
     
     def do_exercise(self, lesson_num):
-        """Interactive exercise for a lesson"""
+        """
+        Interactive code exercise for hands-on Python practice.
+        
+        Process:
+        1. Display exercise description and hint
+        2. Accept multi-line Python code input
+        3. Validate code using lambda checker function
+        4. Execute code and display output if valid
+        5. Provide feedback on correctness
+        
+        User can type 'done' to submit or 'cancel' to return to menu.
+        Improves learning through direct code writing practice.
+        
+        Args:
+            lesson_num (int): Index of lesson containing exercise
+        """
         lesson = self.lessons[lesson_num]
         exercise = lesson['exercise']
         
@@ -1995,7 +2123,20 @@ print("o" in message)       # True
             print("Please enter A, B, C, or D")
     
     def _show_exam_results(self, correct, results):
-        """Display exam results and review incorrect answers"""
+        """
+        Display practice exam results with detailed feedback and review.
+        
+        Shows:
+        1. Score and pass/fail status (70% = passing)
+        2. Topic-by-topic breakdown of performance
+        3. Incorrect answers with correct solutions
+        4. Detailed explanations for learning
+        5. Recommendations for improvement
+        
+        Args:
+            correct (int): Number of questions answered correctly
+            results (list): List of answer records with explanations
+        """
         score = int((correct / 20) * 100)
         
         self.clear_screen()
@@ -2028,7 +2169,21 @@ print("o" in message)       # True
         input(self.PRESS_ENTER_NEWLINE)
     
     def take_practice_exam(self):
-        """Take a practice exam with random questions"""
+        """
+        Take a 20-question practice exam simulating the real PCEP exam.
+        
+        Features:
+        - Randomly samples 20 questions from 245+ question pool
+        - No immediate feedback during exam (like real PCEP exam)
+        - Questions from original lessons + study guide
+        - Shows score and pass/fail status (70% = pass)
+        - Detailed review of incorrect answers after exam
+        - Tracks topic areas needing improvement
+        
+        Question sources:
+        - Original 62 quiz questions from 15 lessons
+        - 183 questions from Certify4Sure study guide
+        """
         if len(self.practice_questions) < 20:
             print("\nNot enough questions available for practice exam.")
             input(self.PRESS_ENTER)
@@ -2162,7 +2317,19 @@ KEY THINGS TO MEMORIZE:
         return False
     
     def run(self):
-        """Main application loop"""
+        """
+        Main application loop - continuously displays menu and handles user input.
+        
+        User can:
+        - Choose a lesson number (1-16) to learn and quiz
+        - Press 'n'/'p' to navigate to next/previous lesson
+        - Press 'e' to take a 20-question practice exam
+        - Press 's' to view study tips
+        - Press 'r' to reset progress
+        - Press 'q' to quit the application
+        
+        Loop continues until user quits, saving progress after each action.
+        """
         while True:
             self.display_menu()
             
